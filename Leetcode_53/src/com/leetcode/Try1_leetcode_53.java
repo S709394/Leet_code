@@ -99,6 +99,6 @@ public class Try1_leetcode_53 {
 	 }
 	 
 	 return  MaxSoFar;
-	 //near the g chest xxxxxx
+	
 	}
 }
