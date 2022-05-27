@@ -40,16 +40,13 @@ Constraints:
 public class Solution {
 	public static void main(String[] args) {
 //		nums1 = [1,2,2,1];
-//		nums2 = [2,2];
-		
-		
+//		nums2 = [2,2];		
 	}
 	
 	public static int[] intersection(int[] nums1, int[] nums2) {
         
 		Set <Integer>  set1 = new HashSet <>();
 		
-
 		for  (int value : nums1 )
 		{
 			 set1.add(value);
@@ -71,9 +68,7 @@ public class Solution {
 		int pos =0;
 		for (int value : set2) {
 			result[ pos++]= value;
-		}
-		
-				
+		}			
 		return  result;
     }
 }
