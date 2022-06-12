@@ -130,7 +130,7 @@ public class Leetcode_1260_try2 {
 }
 
 /*Another solution :  
- * 
+ * *
  * Lynn_W   April 10, 2022 9:46 PM
  * https://leetcode.com/problems/shift-2d-grid/discuss/708897/Java-simple-one-loop
  *
