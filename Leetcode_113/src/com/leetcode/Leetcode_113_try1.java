@@ -85,5 +85,27 @@ public class Leetcode_113_try1 {
 		      }
 		  }
 		 
+	// this is a solution from @xi11  https://leetcode.com/problems/path-sum-ii/discuss/36683/DFS-with-one-LinkedList-accepted-java-solution
+	public static List<List<Integer>> pathSum(TreeNode root, int sum) {
+        List <List<Integer>> result = new ArrayList() ;
+        List<Integer> cur =new ArrayList();
+        
+        pathSum(root,sum,cur,result);
+        
+        return result;
+    }
 	
+	public static void pathSum(TreeNode root, int sum,List<Integer>cur, List<List<Integer>>ret) {
+			if(root ==null) {
+				return;
+			}
+			cur .add(root.val);
+			if(root.left ==null && root.right==null &&root.val==sum) {
+				ret.add(new ArrayList(cur));
+			}else {
+				pathSum(root.left,sum-root.val,cur,ret);
+				pathSum(root.right,sum-root.val,cur,ret);
+			}
+			cur.remove(cur.size()-1);
+	}
 }
