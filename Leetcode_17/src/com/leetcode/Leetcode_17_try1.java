@@ -54,6 +54,9 @@ public class Leetcode_17_try1 {
 		if(digits.length()==0) {
 			return ans;
 		}
+		
+		StringBuilder sb =new StringBuilder();
+		List<String> res = new ArrayList();
 		///
 		
 		return ans;
