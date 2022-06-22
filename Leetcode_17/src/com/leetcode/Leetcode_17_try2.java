@@ -34,7 +34,9 @@ Constraints:
 0 <= digits.length <= 4
 digits[i] is a digit in the range ['2', '9'].
  * 
- * */package com.leetcode;
+ * */
+
+package com.leetcode;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -46,6 +48,8 @@ import java.util.List;
   *  
   *  LinkedList.peek(); // "Looking the 1st elem  but not remove it "
   *   
+  *   
+  *   Can not fully understand, try  the 3rd time
   * */
 
 
@@ -90,13 +94,11 @@ public class Leetcode_17_try2 {
 					System.out.println("String t :"+t);//test
 					System.out.println("LS .size()  (after:"+LS.size());//test
 				
-				for(char s : mapping[x].toCharArray()) {
-					
+				for(char s : mapping[x].toCharArray()) {				
 //					System.out.println(s);//test
 					LS.add(t+s);
-//					System.out.println("t+s:" + t+ s);//test
-				}
-				
+					System.out.println("t+s:" + t+ s);//test
+				}	
 			}
 		}
 		return LS;
