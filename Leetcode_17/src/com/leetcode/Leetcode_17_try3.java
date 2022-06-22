@@ -58,6 +58,7 @@ public class Leetcode_17_try3 {
 	
 	public static void main(String[] args) {
 		
+		//case
 		String digits = "239";
 		
 		
@@ -66,16 +67,25 @@ public class Leetcode_17_try3 {
 	public static List<String> letterCobinations (String digits){
 		
 		List <String>  result = new LinkedList<String>();
-		
-		//  
-		
-		
 		if (digits.length()==0) {
 			return result;
 		}
 		
-		
+		//  for the  String s = result.remove(0);
 		result.add (0,"");
+		
+		/*A .                             ""
+		 *B.                  a            b         c
+		 *C.              ad ae af     bd be bf     cd ce cf
+		 *
+		 *D.      adw adx ady adz
+		 *		  aew aex aey aez 
+		 *		  ...
+		 *        ...                     ...          ... 
+		 *		  
+		 * */
+		
+		
 		
 		for ( int i = 0 ; i < digits.length();i++) {
 			int x =  Character.getNumericValue( digits.charAt(i));
