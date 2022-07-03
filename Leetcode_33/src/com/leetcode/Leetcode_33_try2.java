@@ -45,7 +45,9 @@ nums is an ascending array that is possibly rotated.
 
 
 /*Idea   :
- * Use  binary search to find the MIN int in the array
+ * 1. Use  1st binary search to find the MIN int in the array
+ * 
+ * 2. Use 2nd  to find the index of the 
  * 
  * 
  * 
@@ -74,6 +76,7 @@ public class Leetcode_33_try2 {
 			  return -1;
 		  }
 		  
+		//1st binary search  ， to find the   Min in the array 
 		  int left = 0 ; int right = nums.length-1;
 		  
 		  while (left<right) {
@@ -120,12 +123,9 @@ public class Leetcode_33_try2 {
 			  }else {
 				  right= midPoint-1;
 			  }
-			 
-			  
-			  
+
 		  }
-		  
-		  
+	  
 //		  while(nums[left] <= nums[right]) {
 //			  
 //		  }
