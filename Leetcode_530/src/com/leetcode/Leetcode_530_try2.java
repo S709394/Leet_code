@@ -94,7 +94,7 @@ public class Leetcode_530_try2 {
 			if (root == null) {
 				return;
 			}
-			System.out.println(" welcome to  dfs ()");
+			System.out.println(" welcome to  dfs ()"); //test
 			dfs(root.left);
 
 			//Find the very left of the BST        (    the (root.left) == null )
