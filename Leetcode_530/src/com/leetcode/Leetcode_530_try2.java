@@ -94,18 +94,18 @@ public class Leetcode_530_try2 {
 			if (root == null) {
 				return;
 			}
-			System.out.println(" welcome to  dfs ()"); //test
+//			System.out.println(" welcome to  dfs ()"); //test
 			dfs(root.left);
 
 			//Find the very left of the BST        (    the (root.left) == null )
 			if (pre == -1) {
 				pre = root.val;
-				System.out.println(" Pre :   " + pre);
+//				System.out.println(" Pre :   " + pre); //test
 			} else {
 				ans = Math.min(ans, root.val - pre);
 				pre = root.val;
 
-				System.out.println("Pre and Ans in else \n Pre :   " + pre + "Ans : " + ans);
+//				System.out.println("Pre and Ans in else \n Pre :   " + pre + "Ans : " + ans); //test
 			}
 			dfs(root.right);
 
