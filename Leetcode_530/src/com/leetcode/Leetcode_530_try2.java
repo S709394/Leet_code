@@ -46,6 +46,9 @@ Submissions
  *  
  *  1.  Find the very left of the  BST   
  *  2.  set the 1st left
+ *  3.  Use Dfs 
+ *    3a .  loop thought  the end of the left  (  root.left ==null)   
+ *    then find the Min value of  ("root.left.val -  root.val")
  *  
  *  Runtime: 1 ms, faster than 92.05% of Java online submissions for Minimum Absolute Difference in BST.
 Memory Usage: 45.1 MB, less than 58.88% of Java online submissions for Minimum Absolute Difference in BST.
@@ -97,7 +100,7 @@ public class Leetcode_530_try2 {
 //			System.out.println(" welcome to  dfs ()"); //test
 			dfs(root.left);
 
-			//Find the very left of the BST        (    the (root.left) == null )
+			// Find the very left of the BST ( the (root.left) == null )
 			if (pre == -1) {
 				pre = root.val;
 //				System.out.println(" Pre :   " + pre); //test
