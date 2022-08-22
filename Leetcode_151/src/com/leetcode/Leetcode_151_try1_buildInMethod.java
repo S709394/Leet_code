@@ -53,7 +53,28 @@ Memory Usage: 42.9 MB, less than 84.76% of Java online submissions for Reverse W
 
 package com.leetcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Leetcode_151_try1_buildInMethod {
+//	//v2.0 Using  build  trim and 
+//	
+//	
+//	/*Runtime: 10 ms, faster than 62.23% of Java online submissions for Reverse Words in a String.
+//Memory Usage: 43.7 MB, less than 57.19% of Java online submissions for Reverse Words in a String.*/
+//	public String reverseWords(String s) {
+//		
+//		// regex         meaning        "more then 1 spaces"
+//		String [] words = s.trim().split(" +");
+//		
+//		Collections.reverse(Arrays.asList(words));
+//		
+//		return  String.join(" ", words);
+//		
+//	}
+	
+	//v1.0
 	public String reverseWords(String s) {
 		StringBuilder  sb =  new StringBuilder();
 		for (int start = s.length()-1;start>=0;start--) {
@@ -67,6 +88,8 @@ public class Leetcode_151_try1_buildInMethod {
 				start --;
 			}
 			
+			
+			System.out.println("start:"+start+1 + "\n end + 1"+ end+1);
 			sb.append(s.substring(start+1,end+1)) .append(' ');
 			
 			
