@@ -1,4 +1,3 @@
-
 /*416. Partition Equal Subset Sum
 Medium
 
@@ -35,73 +34,58 @@ Constraints:
  * 
  * Need a little bit practice later 
  * 
- * 1. make sure   len >=2 ;
- * 	make sure sum %2 ==0 
- *  make sure  maxNum  <=    sum/2 
- *  
- *  
- * 2.  init   
- * 	   dp [len] [target+1];
- * 	   
- * 	   dp  [i][0]  =true;
  * 
  * 
- * 
+ * Runtime: 46 ms, faster than 73.07% of Java online submissions for Partition Equal Subset Sum.
+Memory Usage: 43 MB, less than 83.14% of Java online submissions for Partition Equal Subset Sum.
  * */
 package com.leetcode;
 
-public class Leetcode_416_knapack_try2_practise {
+public class Leetcode416_knapack_try3_practise {
 	public static void main(String[] args) {
 //		int nums [] =  {1,5,11,5};
 		int nums[] = { 3 };
 		System.out.println(canPartition(nums));
 	}
+	
 	public static boolean canPartition(int[] nums) {
 		
-		int len  =   nums.length;
-		if (len <2) return false;
-		int sum = 0, maxNum=0;
+		int len = nums.length;
 		
-		for (int num:nums) {
-			sum += num;
-			maxNum =   Math.max(num, maxNum);
+		if (len<2) return false;
+		
+		int sum=0, maxNum=0;
+		
+		for (int num  : nums) {
+			sum+= num;
+			maxNum = Math.max(num, maxNum);
 		}
 		
-		if( sum %2==1) return false;
+		if (sum%2 ==1)	 return false ;
 		
-		int target = sum /2;
+		int target = sum/2 ;
+		if (maxNum > target ) return false;
 		
-		if (maxNum> target) {
-			return false ;
-		}
-		
-		//init 
-		boolean [][] dp = new boolean [len] [target+1];
-		
+		boolean  [][] dp  =   new boolean [len] [target+1];
 		
 		for (int i = 0 ; i < len ; i ++) {
-			dp [i][0] =true;
-		}
-		dp [0][nums[0]]=true;
-		
-		for (int i = 1 ; i < len ; i ++) {
-			 int num = nums[i];
-			 for (int j = 1 ; j<= target ; j ++) { //wrong
-//			 for (int j = 1 ; j< target ; j ++) { //wrong
-				 if (j>=num) {
-					 
-					 // ***    
-//					 dp [i][j] = dp[i-1][j] ||   dp [i] [j-num];//wrong
-					 dp [i][j] = dp[i-1][j] ||   dp [i-1] [j-num];
-				 }else {
-					 dp [i][j] = dp[i-1][j];
-				 }
-				 
-			 }
+			dp[i][0]= true;
 		}
 		
+		dp[0][nums[0]] =true; 
 		
-		return dp[len-1] [target];
-				
+		for (int i = 1 ; i < len; i ++) {
+			int num = nums[i];
+			for (int j = 1 ; j<= target;++j) {
+				if (j>=num) {
+//					dp[i][j]= dp[i-1][j] ||dp [i][j-num];//wrong
+					dp[i][j]= dp[i-1][j] ||dp [i-1][j-num];
+				}else {
+					dp[i][j]= dp[i-1][j] ;
+				}
+			}
+		}
+		
+		return dp[len-1][target];
 	}
 }
