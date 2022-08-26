@@ -34,7 +34,12 @@ Constraints:
  * 
  * Need a little bit practice later 
  * 
+ * Explanation:
+ * dp[i][j]= dp[i-1][j]           ||   dp [i-1][j-num];
  * 
+ *  USE the current num           ||   NOT TO use the current num 
+ * 
+ * This is use   "Do not put item in the back" ||  "put item in the backpack"
  * 
  * Runtime: 46 ms, faster than 73.07% of Java online submissions for Partition Equal Subset Sum.
 Memory Usage: 43 MB, less than 83.14% of Java online submissions for Partition Equal Subset Sum.
