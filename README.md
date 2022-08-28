@@ -4,7 +4,7 @@ A place that store some Leetcode questions ,solutions and ideas. (Most Java So f
 
 ## FAQ
 
-###Q1:What is this?
+### Q1:What is this?
 A: A place that stores some Leetcode practices.
 
 ### Q2: What kind of questions and solutions are stored here?
@@ -17,7 +17,8 @@ A:   1. The questions that I fully understand || able to follow.
      
 ### Q4: How do you name the classes?
      1.  "practise"  means I try to practise my own after I understand the solution myself.
-     2.  Something like `leetcode_008_try2_build-In` ,  `leetcode_123_try3_stack`  means  "I used build-In method to make it short","I used the Stack to store treeNodes"
+     2.  Something like `leetcode_008_try2_build-In` ,  `leetcode_123_try3_stack`  
+          means  "I used build-In method to make it short","I used the Stack to store treeNodes"
      
 ### Q5: Why so many comments in it? What are they for?
      0. The long comments are the way how I study.
