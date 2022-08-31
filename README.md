@@ -5,10 +5,10 @@ A place that store some Leetcode questions ,solutions and ideas. (Most Java So f
 ## FAQ
 
 ### Q1:What is this?
-A: A place that stores some Leetcode practices.
+     A place that stores some Leetcode practices.
 
 ### Q2: What kind of questions and solutions are stored here?
-A:   1. The questions that I fully understand || able to follow.
+     1. The questions that I fully understand || able to follow.
      2. The questions that I have not fully followed. I left some comments on them to  show which part I do not get it so far and may get it soon  (No more than 5 I guess.)
      
 ### Q3: What kind of questions and solutions are NOT going to be stored here?
