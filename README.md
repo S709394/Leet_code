@@ -1,4 +1,6 @@
 # Leet_code
+[![Travis](https://img.shields.io/badge/language-Java-blue.svg)]
+
 A place that store some Leetcode questions ,solutions and ideas. (Most Java So far
 
 
