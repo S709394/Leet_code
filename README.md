@@ -11,8 +11,8 @@ A place that store some Leetcode questions ,solutions and ideas. (Most Java So f
 
 ### Q2: What kind of questions and solutions are stored here?
      1. The questions that I fully understand || able to follow.
-     2. The questions that I have not fully followed. I left some comments on them 
-        to  show which part I do not get it so far and may get it soon  (No more than 5 I guess.)
+     2. No more than 5 questions that I have not fully followed. I left some comments on them 
+        to  show which part I do not get it so far and may get it soon.
      
 ### Q3: What kind of questions and solutions are NOT going to be stored here?
      1. The solutions that confuse me after I read them.
@@ -33,6 +33,5 @@ A place that store some Leetcode questions ,solutions and ideas. (Most Java So f
        
 ### Q xxx    （May add sth later ）
 
-2022 Augest
-Stephen
+
 
