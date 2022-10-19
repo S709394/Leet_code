@@ -1,5 +1,8 @@
 //time complexity  O(n)
 
+//Runtime: 6 ms, faster than 69.27% of Java online submissions for Next Greater Element I.
+//Memory Usage: 45.1 MB, less than 6.99% of Java online submissions for Next Greater Element I.
+
 
 package com.leetcode;
 
@@ -20,11 +23,26 @@ public class Leetcode_496_try2_stack {
 		Stack <Integer> stack = new Stack <> ();
 		int n = nums2.length;
 		
-		for (int i = n -1 ; i >=0; i --) {
-			while (!stack.isEmpty() &&stack.peek()<=nums2[i])
+//		for (int i = n -1 ; i >=0; i --) {
+		for (int i = 0  ; i < n ; i ++) {
+			while (!stack.isEmpty() &&stack.peek()<nums2[i]) {
 //				
-				stack.pop();
+				
+				map.put(stack.pop(),nums2[i]);
+				}
+			stack.push(nums2[i]);
 		}
+		
+		//test 
+		
+		System.out.println(stack.size());
+		
+		for (int i = 0 ; i < nums1.length;i++) {
+			nums1[i] = map.getOrDefault(nums1[i], -1);
+		}
+		
+		return nums1;
+		
 		
 	}
 }
