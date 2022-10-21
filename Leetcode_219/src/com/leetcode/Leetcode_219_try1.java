@@ -82,7 +82,7 @@ public class Leetcode_219_try1 {
         	
         	hm.put(nums[i],i);
         	
-        	System.out.println("hm length" +hm.size());
+        	System.out.println("hm length" +hm.size());//test 
         }
         return false;
     }
