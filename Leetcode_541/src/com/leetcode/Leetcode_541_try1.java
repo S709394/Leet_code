@@ -1,3 +1,5 @@
+//works well now 
+
 package com.leetcode;
 
 public class Leetcode_541_try1 {
@@ -7,15 +9,29 @@ public class Leetcode_541_try1 {
 //		String str = "aabbccccaabbc";
 
 		String str = "aab00ccccceeaffggggg1123";
+		int k = 5;
+		
+//		String str = "aa00ccccppffgggg";
+//		int k = 4;
+//		
+//		String str = "aa00aac";
+		
+//		String str = "abcdefg";
+//		
+//		String str = "abccabb";
+//		int k =2 ; 
+		
+		
 //		String str = "abcdefg";
 		
 //		String str = "aasccc";
-		int k = 5;
+//		int k = 5;
 
 		char[] arr = str.toCharArray();
 //		partReverse(0, 2, arr);
 
 //		System.out.println(arr);
+		System.out.println(str);
 		System.out.println(reverseStr( str,  k));
 		
 		
@@ -44,14 +60,14 @@ public class Leetcode_541_try1 {
 		int lastIdxToReverse;
 		if (len - zeroIdxOfLastPart > k) {
 			System.out.println(">>>"); //test
-			lastIdxToReverse = zeroIdxOfLastPart + k;
+			lastIdxToReverse = zeroIdxOfLastPart + k-1;
 		}else {
 			lastIdxToReverse= len-1;
 		}
 		partReverse(zeroIdxOfLastPart, lastIdxToReverse, cArr);
-
-		System.out.println("zeroIdxOfLastPart:" +zeroIdxOfLastPart); //test
-		System.out.println("lastIdxToReverse:" +lastIdxToReverse); //test
+//
+//		System.out.println("zeroIdxOfLastPart:" +zeroIdxOfLastPart); //test
+//		System.out.println("lastIdxToReverse:" +lastIdxToReverse); //test
 
 //		for (int i = zeroIdxOfLastPart ; (i<  zeroIdxOfLastPart + k) && i<len ;  i++) {
 //			i++;
