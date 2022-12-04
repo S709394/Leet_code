@@ -33,16 +33,17 @@ public class Leetcode_1002_try2 {
 			}
 
 		}
-		List<String> list = new ArrayList <> ()  ;
-		
-		for (int i = 0 ; i<toCompareArr.length;i++) {
-			while (toCompareArr[i] > 0) {
-				
-				
-				toCompareArr[i]--;
-			}
-			
-		}
+		List<String> list = new ArrayList<>();
 
+		for (int i = 0; i < toCompareArr.length; i++) {
+			while (toCompareArr[i] > 0) {
+
+				toCompareArr[i]--;
+
+				list.add("" + toCompareArr[startStr.toCharArray()[i] - 'a']);
+			}
+
+		}
+		return list;
 	}
 }
