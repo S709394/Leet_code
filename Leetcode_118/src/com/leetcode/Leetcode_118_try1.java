@@ -17,7 +17,7 @@ public class Leetcode_118_try1 {
 			List<Integer> list = new ArrayList<Integer>();
 				
 			for (int j = 0; j < i+1; j++) {
-				if (i == 0 || j == i) {
+				if (j == 0 || j == i) {
 					list.add(1);
 				} else {
 					list.add(ll.get(i-1).get(j-1) + ll.get(i -1).get(j));
