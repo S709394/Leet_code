@@ -31,28 +31,31 @@ public class Leetcode_102_try1_recursion {
 			this.right = right;
 		}
 	}
-	
+
 	public List<List<Integer>> levelOrder(TreeNode root) {
 		List<List<Integer>> resCnts = new ArrayList<List<Integer>>();
-		helper (resCnts , new ArrayList <Integer> (),root, 0 );
-		return resCnts ;
-    } 
-	
-	public static void helper ( List<List<Integer>> resCnts , ArrayList<Integer> list ,TreeNode root, int level) {
-		if (root ==null) {
-			return ;
+		helper(resCnts, new ArrayList<Integer>(), root, 0);
+		return resCnts;
+	}
+
+	public static void helper(List<List<Integer>> resCnts, ArrayList<Integer> list, TreeNode root, int level) {
+		if (root == null) {
+			return;
 		}
-		
-		// Start from Root at level 0  , than its child root.left&& root.right  on level  1   and so on
-		if (resCnts.size()==level) {
-			resCnts.add(new ArrayList <Integer>(list));
+
+		// Start from Root at level 0 , than its child root.left&& root.right on level 1
+		// and so on
+
+		//// Add a list when reach a new level to the res
+		if (resCnts.size() == level) {
+			resCnts.add(new ArrayList<Integer>(list));
 		}
-		
+
+		// Add the value of the current node to the list for its level
 		resCnts.get(level).add(root.val);
-		
-	
-		helper (resCnts , new ArrayList <Integer> (),root.left, level+1 );
-		helper (resCnts , new ArrayList <Integer> (),root.right, level+1 );
-	
+
+		helper(resCnts, new ArrayList<Integer>(), root.left, level + 1);
+		helper(resCnts, new ArrayList<Integer>(), root.right, level + 1);
+
 	}
 }
