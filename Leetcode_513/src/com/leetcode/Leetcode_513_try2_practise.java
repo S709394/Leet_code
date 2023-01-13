@@ -30,22 +30,22 @@ The number of nodes in the tree is in the range [1, 104].
 -231 <= Node.val <= 231 - 1
  * */
 
-/*Idea 
+/*Try2  practise 
+ * 
+ * Idea 
  *
  * use  deque  is better ,  use LinkedList is ok too  
- * 
- * 
- * Runtime: 3 ms, faster than 25.85% of Java online submissions for Find Bottom Left Tree Value.
-Memory Usage: 44.1 MB, less than 38.14% of Java online submissions for Find Bottom Left Tree Value.
-
-Not that fast 
  * */
+
+
 
 package com.leetcode;
 
 import java.util.LinkedList;
 
-public class Leetcode_513_try1_linkedList {
+import com.leetcode.Leetcode_513_try1_linkedList.TreeNode;
+
+public class Leetcode_513_try2_practise {
 	public class TreeNode {
 		int val;
 		TreeNode left;
@@ -70,36 +70,44 @@ public class Leetcode_513_try1_linkedList {
 	}
 
 	public int findBottomLeftValue(TreeNode root) {
-		if (root == null)
-			return 0;
+		if(root==null) return 0 ; 
 		
-		LinkedList<TreeNode> ll = new LinkedList<>();
-
+//		LinkedList<Integer> ll = new LinkedList <Integer> ();//wrong 
+		LinkedList<TreeNode> ll = new LinkedList <TreeNode> ();
+		
+		
 		ll.add(root);
-		int resCnts = 0;
+		
+		int resCnts =0;
+		
 		while (!ll.isEmpty()) {
 			int size = ll.size();
-//			System.out.println("size :" + size);
-			for (int i = 0; i < size; i++) {
-
-//	                TreeNode node = ll.pollFirst(); 
-
-				TreeNode node = ll.remove(0);
-				if (i == 0) {
-					resCnts = node.val;
-				}
-//	                if (node.left != null)ll.addLast(node.left);
-//	                if (node.right != null)ll.addLast(node.right);
-				if (node.left != null)
-					ll.add(node.left);
+			
+			for (int i = 0 ; i < size ; i ++) {
 				
-//				System.out.println("added left + node.val" + node.left.val);
-				if (node.right != null)
+				
+				//Ctrl- z the  parent node and paste into the 'node'  (put into after removed it )
+				TreeNode node = ll.remove(0) ;
+				
+				if (i==0) {
+					resCnts = node.val;;
+				}
+				
+				// Must be  left go first and then right .
+				if(node.left!=null) {
+					ll.add(node.left);
+				}
+				if(node.right!=null) {
 					ll.add(node.right);
-//				System.out.println("added right + node.val" + node.right.val);
-
+				}
+				
+				
 			}
+			
+			
+			
 		}
-		return resCnts;  
+		
+		return resCnts; 
 	}
 }
