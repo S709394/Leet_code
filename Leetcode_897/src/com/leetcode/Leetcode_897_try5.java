@@ -2,9 +2,9 @@ package com.leetcode;
 
 import java.util.Stack;
 
-import com.leetcode.Leetcode_897_try2.TreeNode;
+//import com.leetcode.Leetcode_897_try4.TreeNode;
 
-public class Leetcode_897_try3 {
+public class Leetcode_897_try5 {
 	public class TreeNode {
 		int val;
 		TreeNode left;
@@ -23,23 +23,22 @@ public class Leetcode_897_try3 {
 			this.right = right;
 		}
 	}
-
+	
+	
 //	TreeNode cur ;
 	public TreeNode increasingBST(TreeNode root) {
-		// aaa
+		Stack<TreeNode> stack = new Stack<>();
+
 		TreeNode dummy = new TreeNode(-1);
 
 		TreeNode pre = dummy;
-
-		Stack<TreeNode> stack = new Stack<>();
-
 		while (!stack.isEmpty() || root != null) {
 			while (root != null) {
 				stack.push(root);
 				root = root.left;
 			}
 
-			root = stack.pop(); 
+			root = stack.pop();
 			pre.left = null;
 			pre.right = root;
 
@@ -48,8 +47,6 @@ public class Leetcode_897_try3 {
 			root = root.right;
 
 		}
-
-		return pre.right;
-
+		return dummy.right;
 	}
 }

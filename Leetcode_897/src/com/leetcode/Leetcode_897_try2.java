@@ -56,9 +56,9 @@ public class Leetcode_897_try2 {
 			
 			//Add to the right node 
 			prev .right = root  ; 
-			
 			prev=root ;
 			
+			//Start from the next level 
 			root=root.right ;
 			
 		}
