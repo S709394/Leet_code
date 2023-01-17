@@ -33,14 +33,20 @@ public class Leetcode_105_try2 {
 
 		// *** try pre length
 		for (int i = 0; i < pLen; i++) {
-			valToIdx.put(preorder[i], i);	
+			valToIdx.put(preorder[i], i);
 		}
 
 		return build(preorder, 0, pLen, inorder, 0, iLen);
 	}
 
-	public TreeNode build(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
+	public TreeNode build(int[] preorder, int preStart, int preEnd,
+			int[] inorder, int inStart, int inEnd) {
 		// root val
+
+		// ???
+		if (preStart > preEnd) {
+			return null;
+		}
 
 		int rootVal = preorder[preStart];
 		// index (of the root)
@@ -50,16 +56,15 @@ public class Leetcode_105_try2 {
 		// leftSize
 
 		int leftSize = index - inStart;
-		
-		
-		//Creat new root 
-		TreeNode root = new TreeNode (rootVal);
-		
-		root .right =  build
-		
-		
-		
 
+		// Creat new root
+		TreeNode root = new TreeNode(rootVal);
+
+		root.left = build(preorder, preStart + 1, preStart + leftSize, inorder, inStart, index - 1);
+
+		root.right = build(preorder, preStart + leftSize + 1, preEnd, inorder, index + 1, inEnd);
+
+		return root;
 	}
 
 }
