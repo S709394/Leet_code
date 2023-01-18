@@ -58,6 +58,7 @@ public class Leetcode_105_try1 {
 		//root here 
 		int rootVal = preorder[preStart] ;
 		
+		//Index in 
 		int index = valToIndex .get(rootVal);
 		
 		int leftSize = index - inStart ;

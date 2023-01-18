@@ -57,7 +57,6 @@ public class Leetcode_105_try2 {
 
 		int leftSize = index - inStart;
 
-		// Creat new root
 		TreeNode root = new TreeNode(rootVal);
 
 		root.left = build(preorder, preStart + 1, preStart + leftSize, inorder, inStart, index - 1);
