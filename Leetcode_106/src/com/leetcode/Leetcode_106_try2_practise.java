@@ -54,8 +54,10 @@ public class Leetcode_106_try2_practise {
 
 		TreeNode root = new TreeNode(rootVal);
 		
-		root.left = build (inorder , inStart , index -1  ,postOrder  , posStart ,posStart+leftSize-1);
-		root.right = build (inorder,index+1, inEnd ,postOrder , posStart+leftSize ,postEnd-1) ;
+		root.left = build (inorder , inStart , index -1  ,
+				postOrder  , posStart ,posStart+leftSize-1);
+		root.right = build (inorder,index+1, inEnd ,
+				postOrder , posStart+leftSize ,postEnd-1) ;
 		return root ;
 	}
 
