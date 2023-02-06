@@ -3,7 +3,17 @@ package com.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-//does not works so far 
+//Works 
+
+
+//Runtime
+//15 ms
+//Beats
+//5.80%
+//Memory
+//42.7 MB
+//Beats
+//5.20%
 public class Leetcode_953_try1 {
 	public boolean isAlienSorted(String[] words, String order) {
 		Map<Character, Integer> mapping = new HashMap<>();
