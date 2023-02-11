@@ -28,32 +28,45 @@ public class Leetcode_594_try2 {
 //			System.out.println("add i :" + i);
 //			System.out.println("hm.getOrDefault(nums[i], 1) :" + hm.getOrDefault(nums[i], 1));
 		}
-//		for (int key : hm.keySet()) {
-//			if ((hm.get(key + 1) == null || hm.get(key + 1) == 0) 
-//					&& hm.get(key - 1) == null || hm.get(key - 1) == 0) {
-//				hm.put(key, 0);
-//			}
-//		}
-		
-		//test 
 		for (int key : hm.keySet()) {
-//			System.out.println( "key:" + key);
-			System.out.println( "hm.get (key) :" + hm.get(key));
-		}
-		
-//		
-//		//test 
-//		System.out.println( hm.get(6) );
-		
-		for (int key : hm.keySet()) {
-			System.out.println("key" + key );
-			if ((hm.get(key + 1) == null ) 
-					&& hm.get(key - 1) == null ) {
+			if ((!hm.containsKey(key + 1) || hm.get(key + 1) == 0) && ( !hm.containsKey(key - 1)
+					|| hm.get(key - 1) == 0)) {
+				
+				System.out.println("remove key:" + key);
 				hm.put(key, 0);
 			}
 		}
-		
-		return 0 ;
+
+//		//test 
+//		for (int key : hm.keySet()) {
+////			System.out.println( "key:" + key);
+//			System.out.println( "hm.get (key) :" + hm.get(key));
+//		}
+
+//		
+//		//test 
+//		System.out.println( hm.get(6) );
+
+//		for (int key : hm.keySet()) {
+//			System.out.println("key" + key);
+//			if ((hm.get(key + 1) == null) && hm.get(key - 1) == null) {
+//				hm.put(key, 0);
+//			}
+//		}
+
+		for (int key : hm.keySet()) {
+			int curRes = 0;
+
+			if (hm.containsKey(key + 1)) {
+				curRes = hm.get(key) + hm.get(key + 1);
+				System.out.println("key : " + key + "cnt:" +hm.get(key)  );
+				System.out.println ( "curRes :" +curRes);
+			}
+			res = Math.max(res, curRes);
+
+		}
+//		System.out.println("contain:" + hm.containsKey(10)); // test
+		return res;
 
 	}
 }

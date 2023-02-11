@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+//going to write the detail in try3 
 public class Leetcode_594_try1 {
 	//does not works so far 
 	public static void main(String[] args) {
