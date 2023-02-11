@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Leetcode_594_try1 {
+	//does not works so far 
 	public static void main(String[] args) {
 //		int nums[] = { 2, 2, 1, 1 };	
 		int nums[] = { 1, 3, 2, 2, 5, 2, 3, 7 };
