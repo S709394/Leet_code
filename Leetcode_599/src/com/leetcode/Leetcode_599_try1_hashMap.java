@@ -36,7 +36,6 @@ public class Leetcode_599_try1_hashMap {
 				minSum = i + j;
 			}
 		}
-		return res.toArray(new String[res.size()]);
-
+		return res.toArray(new String[res.size()]);		
 	}
 }
