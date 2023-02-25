@@ -19,7 +19,7 @@ public class Leetcode_540_try3_binarySearch_practise {
 
 			if (nums[mid] == nums[mid + 1]) {
 				left = mid + 2;
-//				System.out.println( "left" + left);
+//				System.out.println( "left" + left); 
 			} else {
 				
 				right = mid;  
