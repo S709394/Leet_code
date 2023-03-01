@@ -8,6 +8,8 @@ public class Leetcode_1011_try1 {
 	}
 
 	public static int shipWithinDays(int[] weights, int days) {
+		
+		
 		int left = 0, right = 0;
 		for (int weight : weights) {
 			left = Math.max(left, weight);
@@ -16,11 +18,15 @@ public class Leetcode_1011_try1 {
 		}
 
 		while (left < right) {
+			
+			///need : need how big is the ship
 			int mid = (left + right) / 2, need = 1, cur = 0;
 
 			for (int w : weights) {
 				
-				//
+				// If it is full  , then reset "cur" 
+				
+//			after that add \the curWeightd
 				if (cur + w > mid) {
 
 					need += 1;
@@ -30,11 +36,13 @@ public class Leetcode_1011_try1 {
 				;
 				
 			}
+			
 			if (need > days) {
 				left = mid + 1;
 			} else {
 				right = mid;
 			}
+//			System.out.println("left : " + left + "  right :" +right);
 
 		}
 		return left;
