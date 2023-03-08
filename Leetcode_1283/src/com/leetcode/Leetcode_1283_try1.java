@@ -8,11 +8,11 @@ public class Leetcode_1283_try1 {
 	}
 
 	public static int smallestDivisor(int[] nums, int threshold) {
+		
+		//(num+mid-1)/mid returns the smallest integer greater than or equal to the result of the division. This is accomplished by the behavior of integer division in Java, where any remainder is truncated toward zero. For example, 5 / 2 would return 2 instead of 2.5.
 
 		int right = 1, left = 1;
-
 		int res = Integer.MAX_VALUE;
-
 		for (int i = 0; i < nums.length; i++) {
 			right = Math.max(right, nums[i]);
 		}
