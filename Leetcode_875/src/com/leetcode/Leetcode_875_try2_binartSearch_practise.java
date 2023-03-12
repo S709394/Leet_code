@@ -16,14 +16,11 @@ public class Leetcode_875_try2_binartSearch_practise {
 			int mid =  left + (right -left)/2;
 			if (getTotalHours (weights ,mid)>hoursLimit) {
 				left = mid +1 ;
-			}else {
+			}else { 
 				right = mid ;
-			}
-			
+			}		
 //			System.out.println("left  :" + left + "right : " + right);
-			
-			
-			
+		
 		}
 		return left ;
 	}
