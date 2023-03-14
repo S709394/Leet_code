@@ -4,8 +4,8 @@ public class Leetcode_101_try1 {
 
 	public class TreeNode {
 		int val;
-		TreeNode left;
-		TreeNode right;
+		TreeNode lRoot;
+		TreeNode rRoot;
 
 		TreeNode() {
 		}
@@ -14,10 +14,10 @@ public class Leetcode_101_try1 {
 			this.val = val;
 		}
 
-		TreeNode(int val, TreeNode left, TreeNode right) {
+		TreeNode(int val, TreeNode lRoot, TreeNode rRoot) {
 			this.val = val;
-			this.left = left;
-			this.right = right;
+			this.lRoot = lRoot;
+			this.rRoot = rRoot;
 		}
 	}
 
@@ -26,7 +26,7 @@ public class Leetcode_101_try1 {
 			return true ;
 		}
 		
-		return isMirror (root.left ,root.right);
+		return isMirror (root.lRoot ,root.rRoot);
 	}
 
 	public static boolean isMirror(TreeNode lRoot, TreeNode rRoot) {
@@ -35,6 +35,6 @@ public class Leetcode_101_try1 {
 		if (lRoot==null || rRoot==null||lRoot.val!=rRoot.val) return false;
 		
 		
-		return  isMirror (lRoot.left ,rRoot.right) && isMirror (rRoot.left ,lRoot.right)
+		return  isMirror (lRoot.lRoot ,rRoot.rRoot) && isMirror (rRoot.lRoot ,lRoot.rRoot)
 	}
 }
