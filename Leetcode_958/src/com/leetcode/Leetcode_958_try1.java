@@ -44,6 +44,7 @@ public class Leetcode_958_try1 {
 			bfs.offer(node.left);
 			bfs.offer(node.right);
 			System.out.println( bfs.size()); //test code
+			System.out.println( "node .val" +node.val); //test code
 		}
 		
 		while (!bfs.isEmpty()&&bfs.peek()==null) {
