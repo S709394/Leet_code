@@ -11,8 +11,8 @@ import java.util.HashMap;
 public class Leetcode_106_try3_move_base_to_build_practise {
 	public class TreeNode {
 		int val;
-		TreeNode left;
-		TreeNode right;
+		TreeNode lRoot;
+		TreeNode rRoot;
 
 		TreeNode() {
 		}
@@ -21,10 +21,10 @@ public class Leetcode_106_try3_move_base_to_build_practise {
 			this.val = val;
 		}
 
-		TreeNode(int val, TreeNode left, TreeNode right) {
+		TreeNode(int val, TreeNode lRoot, TreeNode rRoot) {
 			this.val = val;
-			this.left = left;
-			this.right = right;
+			this.lRoot = lRoot;
+			this.rRoot = rRoot;
 		}
 		// A hashMap to store the val &&idx
 	}
@@ -62,13 +62,13 @@ public class Leetcode_106_try3_move_base_to_build_practise {
 		
 		
 
-		int leftSize = index - inStart;
+		int lRootSize = index - inStart;
 
 		
-		root.left = build(inOrder, inStart, index - 1, 
-				postOrder, posStart, posStart + leftSize-1);
-		root.right = build(inOrder, index , inEnd, 
-				postOrder, posStart + leftSize , posEnd - 1);
+		root.lRoot = build(inOrder, inStart, index - 1, 
+				postOrder, posStart, posStart + lRootSize-1);
+		root.rRoot = build(inOrder, index , inEnd, 
+				postOrder, posStart + lRootSize , posEnd - 1);
 		return root; 
 	}
 

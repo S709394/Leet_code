@@ -17,8 +17,8 @@ import java.util.HashMap;
 public class Leetcode_106_try5_practise {
 	public class TreeNode {
 		int val;
-		TreeNode left;
-		TreeNode right;
+		TreeNode lRoot;
+		TreeNode rRoot;
 
 		TreeNode() {
 		}
@@ -27,10 +27,10 @@ public class Leetcode_106_try5_practise {
 			this.val = val;
 		}
 
-		TreeNode(int val, TreeNode left, TreeNode right) {
+		TreeNode(int val, TreeNode lRoot, TreeNode rRoot) {
 			this.val = val;
-			this.left = left;
-			this.right = right;
+			this.lRoot = lRoot;
+			this.rRoot = rRoot;
 		}
 
 	}
@@ -52,13 +52,13 @@ public class Leetcode_106_try5_practise {
 			}
 			int rootVal = postOrder [postEnd];
 			int index = valToIdx.get(rootVal);
-			int leftSize = index - inStart;
+			int lRootSize = index - inStart;
 			
 			TreeNode root = new TreeNode (rootVal) ;
-			root.left =  build ( inOrder , inStart ,index-1 , 
-					postOrder, postStart ,postStart +leftSize-1) ;
-			root.right  = build ( inOrder , index +1 , inEnd , 
-					postOrder, postStart +leftSize ,postEnd-1);
+			root.lRoot =  build ( inOrder , inStart ,index-1 , 
+					postOrder, postStart ,postStart +lRootSize-1) ;
+			root.rRoot  = build ( inOrder , index +1 , inEnd , 
+					postOrder, postStart +lRootSize ,postEnd-1);
 			
 			return root;
 			
