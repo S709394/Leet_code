@@ -49,8 +49,10 @@ public class Leetcode_106_try7_practise {
 
 		TreeNode root = new TreeNode(rootVal);
 
-		root.lRoot = build(inOrder, inStart, index - 1, postOrder, postStart, postStart + lRootSize - 1);
-		root.rRoot = build(inOrder, index + 1, inEnd, postOrder, postStart + lRootSize, postEnd - 1);
+		root.lRoot = build(inOrder, inStart, index - 1, postOrder, 
+				postStart, postStart + lRootSize - 1);
+		root.rRoot = build(inOrder, index + 1, inEnd, 
+				postOrder, postStart + lRootSize, postEnd - 1);
 		return root;
 	}
 }
