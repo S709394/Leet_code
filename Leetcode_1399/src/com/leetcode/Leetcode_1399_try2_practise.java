@@ -1,6 +1,6 @@
 package com.leetcode;
 
-public class Leetcode_1399_try1 {
+public class Leetcode_1399_try2_practise {
 
 	public static void main(String[] args) {
 		int n = 13;
@@ -8,47 +8,40 @@ public class Leetcode_1399_try1 {
 		System.out.println(countLargestGroup(n));
 	}
 
-	// from 0~10000 , so the max of sum should be 9+9 + 9 + 9 =36
-	
-//	/https://leetcode.cn/problems/count-largest-group/solution/suan-fa-shi-sui-zhao-shu-ju-zou-de-by-ch-yn64/
 	public static int countLargestGroup(int n) {
 
+		// maxSum : the largest group 's cnt of digit
+
 		int maxSum = 0;
+		// 0~ 10000  :    9 +9 +9 +9 =36
 		int[] cnt = new int[37];
 		for (int i = n; i > 0; i--) {
 			int sum = getSum(i);
-			cnt[sum]++; 
 			
-			//The largest size of the group
-			maxSum = Math.max(cnt[sum],  maxSum);
-			; 
-//			System.out.println( "i :" + i);
-			System.out.println( "maxSum :" + maxSum);
+			
+			cnt[sum]++;
+			maxSum = Math.max(cnt[sum], maxSum);
 		}
-
 		int res = 0;
 
 		for (int i = 36; i > 0; i--) {
 			if (cnt[i] == maxSum) {
-				res++; 
+				res++;
 			}
 		}
 		return res;
 	}
-  //  11 return 2   ,  123 return 1+2+3
-	
-//Get the sum of the digits 
+
+	// sum of digits
 	public static int getSum(int n) {
 		int sum = 0;
 
 		while (n >= 10) {
-//			sum *= 10 ;
 			sum += n % 10;
-
 			n = n / 10;
+
 		}
 		sum += n;
-//		System.out.println("sum: " + sum); // test
 		return sum;
 	}
 }
