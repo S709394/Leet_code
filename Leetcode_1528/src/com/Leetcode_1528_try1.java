@@ -13,6 +13,7 @@ public class Leetcode_1528_try1 {
 			
 			cArr[indices [i]] = s.charAt(i);
 		}
+		
 		return String.valueOf(cArr);
 	}
 }
