@@ -49,32 +49,32 @@ public class Leetcode_704_try1 {
 
 	public static int search(int[] nums, int target) {
 		// set to default value
-		int res = -1;
+		int resCnts = -1;
 
-		int left = 0;
-		int right = nums.length - 1;
+		int lRoot = 0;
+		int rRoot = nums.length - 1;
 
-//		while (left < right ){// wrong 
-		while (left <= right) {
+//		while (lRoot < rRoot ){// wrong 
+		while (lRoot <= rRoot) {
 
-			int mid = left + (right - left) / 2;
+			int mid = lRoot + (rRoot - lRoot) / 2;
 
 			// add this
 
 			int num = nums[mid];
 
 			if (num == target) {
-				res = mid;
-				return res;
+				resCnts = mid;
+				return resCnts;
 			} else if (num < target) {
-				left = mid + 1;
+				lRoot = mid + 1;
 			} else {
-				right = mid - 1;
+				rRoot = mid - 1;
 			}
 			;
 
 		}
-		return res;
+		return resCnts;
 
 	}
 

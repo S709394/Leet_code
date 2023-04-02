@@ -49,12 +49,12 @@ public class Leetcode_704_try2_practise {
 	}
 
 	public static int search(int[] nums, int target) {
-		int res = -1;
+		int resCnts = -1;
 		int start = 0, end = nums.length - 1;
 		while (start <= end) {
 			int mid = start + (end - start) / 2;
 			if (nums[mid] == target) {
-				res = mid;
+				resCnts = mid;
 				return mid;
 			} else if (nums[mid] > target) {
 				end=mid-1;
@@ -64,6 +64,6 @@ public class Leetcode_704_try2_practise {
 			}
 		}
 
-		return res;
+		return resCnts;
 	}
 }
