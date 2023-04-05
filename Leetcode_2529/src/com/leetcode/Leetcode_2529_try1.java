@@ -14,21 +14,25 @@ public class Leetcode_2529_try1 {
 //
 //		
 //	}
-	
-	public static int lessThanZeroIdx (int [] nums) {
+
+	public static int lessThanZeroIdx(int[] nums) {
 		int nLen = nums.length;
 		int left = 0, right = nLen - 1;
 
-		while (left < right) {
+		int zeroIdx = -1;
+
+		while (left <= right) {
 			int mid = left + (right - left) / 2;
 			System.out.println(mid);
-			System.out.println("left"  +left );
-			System.out.println("r"  +right );
+			System.out.println("left" + left);
+			System.out.println("r" + right);
 
-			if (nums[mid] > 0) {
-				right = mid;
+			if (nums[mid] == 0) {
+				zeroIdx = mid;
+			} else if (nums[mid] >= 0) {
+				right = mid - 1;
 			} else {
-				left = mid - 1;
+				left = mid + 1;
 			}
 
 		}
@@ -36,4 +40,9 @@ public class Leetcode_2529_try1 {
 		return left;
 
 	}
+
+	public static int getZeroCnt(int[] nums, int idx) {
+
+	}
+
 }
