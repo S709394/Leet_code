@@ -6,29 +6,31 @@ public class Leetcode_2529_try2 {
 
 		int[] nums = { -2, -1, -1, 0, 0, 0, 1, 2, 3 };
 
-		System.out.println(bisect_left(nums));
-		//https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/solutions/3017003/c-java-python3-binary-search/?orderBy=most_votes
+		System.out.println(bisect_left(nums, 0));
+		// https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/solutions/3017003/c-java-python3-binary-search/?orderBy=most_votes
 
 	}
-	public static int bisect_left(int[] nums ,int target ) {
+	public int maximumCount(int[] nums) {
+		int neg = bisect_left(nums, 0), pos = nums.length - bisect_left(nums, 1);
+
+		return Math.max(neg, pos);
+
+	}
+	public static int bisect_left(int[] nums, int target) {
 		int nLen = nums.length;
 		int left = 0, right = nLen - 1;
-		
-		while (left < right ) {
+
+		while (left < right) {
 			int mid = left + (right - left) / 2;
-			if (nums[mid] <target) {
-				
-				left = mid;
+			if (nums[mid] < target) {
+
+				left = mid+1;
 			} else {
-				right  =mid +1 ;
+				right = mid ;
 			}
 		}
+		return left;
 	}
-	public int maximumCount(int[] nums) {
-		int neg = bisect_left (nums,0) ,
-				pos = nums.length - bisect_left (nums,1);
-		
-		return Math.max(neg, pos) ;
-		
-	}
+
+	
 }
