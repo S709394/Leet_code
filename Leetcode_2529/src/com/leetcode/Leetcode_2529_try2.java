@@ -7,6 +7,7 @@ public class Leetcode_2529_try2 {
 		int[] nums = { -2, -1, -1, 0, 0, 0, 1, 2, 3 };
 
 		System.out.println(bisect_left(nums));
+		//https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/solutions/3017003/c-java-python3-binary-search/?orderBy=most_votes
 
 	}
 	public static int bisect_left(int[] nums ,int target ) {
@@ -24,7 +25,10 @@ public class Leetcode_2529_try2 {
 		}
 	}
 	public int maximumCount(int[] nums) {
+		int neg = bisect_left (nums,0) ,
+				pos = nums.length - bisect_left (nums,1);
 		
+		return Math.max(neg, pos) ;
 		
 	}
 }

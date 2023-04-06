@@ -19,20 +19,19 @@ public class Leetcode_2529_try1 {
 		int nLen = nums.length;
 		int left = 0, right = nLen - 1;
 
-		int zeroIdx = -1;
+//		int zeroIdx = -1;
 
-		while (left <= right) {
+		while (left < right) {
 			int mid = left + (right - left) / 2;
 			System.out.println(mid);
 			System.out.println("left" + left);
 			System.out.println("r" + right);
 
-			if (nums[mid] == 0) {
-				zeroIdx = mid;
-			} else if (nums[mid] >= 0) {
-				right = mid - 1;
-			} else {
+			if (nums[mid] < 0) {
 				left = mid + 1;
+
+			} else {
+				right = mid - 1;
 			}
 
 		}
