@@ -2,7 +2,11 @@ package com.leetcode;
 
 public class Leetcode_1351_try1_binarySearch {
 	public static void main(String[] args) {
-		int[][] grid = { { 4, 3, 2, -1 }, { 3, 2, 1, -1 }, { 1, 1, -1, -2 }, { -1, -1, -2, -3 } };
+		//going to try 2 
+		int[][] grid = { { 4, 3, 2, -1 }, 
+				{ 3, 2, 1, -1 }, 
+				{ 1, 1, -1, -2 }, 
+				{ -1, -1, -2, -3 } };
 		System.out.println(countNegatives(grid));
 	}
 
