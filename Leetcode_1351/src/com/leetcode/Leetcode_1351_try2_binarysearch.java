@@ -2,11 +2,12 @@ package com.leetcode;
 
 public class Leetcode_1351_try2_binarysearch {
 	public static void main(String[] args) {
+		//DOes not works 
 		//  TRY THE 2ND CASE
 		// going to try 2
-//		int[][] grid = { { 4, 3, 2, -1 }, { 3, 2, 1, -1 }, { 1, 1, -1, -2 }, { -1, -1, -2, -3 } };
+		int[][] grid = { { 4, 3, 2, -1 }, { 3, 2, 1, -1 }, { 1, 1, -1, -2 }, { -1, -1, -2, -3 } };
 //		int[][] grid = { { 3, 2 }, { 1, 0 } };
-		int[][] grid = { { 5,1,0 }, {-5,-5,-5 } };
+//		int[][] grid = { { 5,1,0 }, {-5,-5,-5 } };
 		System.out.println(countNegatives(grid));
 	}
 
