@@ -5,10 +5,10 @@ public class Leetcode_1351_try3_binarySearch {
 		// DOes not works
 		// TRY THE 2ND CASE
 		// going to try 2
-//		int[][] grid = { { 4, 3, 2, -1 }, { 3, 2, 1, -1 }, { 1, 1, -1, -2 }, { -1, -1, -2, -3 } };
+		int[][] grid = { { 4, 3, 2, -1 }, { 3, 2, 1, -1 }, { 1, 1, -1, -2 }, { -1, -1, -2, -3 } };
 //		int[][] grid = { { 3, 2 }, { 1, 0 } };
 //		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 } };
-		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 }, { -5, -5, -5 } };
+//		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 }, { -5, -5, -5 } };
 		System.out.println(countNegatives(grid));
 	}
 
@@ -27,21 +27,25 @@ public class Leetcode_1351_try3_binarySearch {
 		while (j >= 0 && i < m) {
 			System.out.println("i :" + i + "  /n j : " + j);
 
-			if (grid[i][j] < 0) {
+			if (grid[i][j] < 0&& j!=0) {
 				j--;
 				System.out.println(" j-- ");
+				
 			} else {
 
-				res += n - j - 1;
-
-				System.out.println("res A: " + res);
+				
 				i++;
-			}
-			if (j == 0) {
-				res += n;
-				System.out.println("res B: " + res);
+				if (j == 0) {
+					res += n;
+					System.out.println("res B: " + res);
 
+				}else {
+					res += n - j - 1;
+
+					System.out.println("res A: " + res);
+				}
 			}
+			
 			
 		}
 		return res;
