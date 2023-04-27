@@ -5,8 +5,8 @@ public class Leetcode_1351_try4_binarySearch {
 		
 //		int[][] grid = { { 4, 3, 2, -1 }, { 3, 2, 1, -1 }, { 1, 1, -1, -2 }, { -1, -1, -2, -3 } };
 //		int[][] grid = { { 3, 2 }, { 1, 0 } };
-//		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 } };
-		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 }, { -5, -5, -5 } };
+		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 } };
+//		int[][] grid = { { 5, 1, 0 }, { -5, -5, -5 }, { -5, -5, -5 } };
 		System.out.println(countNegatives(grid));
 	}
 
@@ -18,6 +18,7 @@ public class Leetcode_1351_try4_binarySearch {
 		//edge 
 		int m = grid.length;
 		int n = grid[0].length;
+		System.out.println( "m" + m  +  '/'  +  "n" +n   );
 
 		//row : start   from top 
 		int r = 0;
@@ -34,6 +35,7 @@ public class Leetcode_1351_try4_binarySearch {
 				
 				// count the  negatives num in this row
 				cnt += m - r;
+				System.out.println("cnt : " + cnt);
 			}else {
 				r++;
 			}
