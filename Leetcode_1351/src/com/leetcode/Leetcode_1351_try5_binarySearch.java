@@ -14,6 +14,8 @@ public class Leetcode_1351_try5_binarySearch {
 	public static int countNegatives(int[][] grid) {
 		int m = grid.length;
 		int n = grid[0].length;
+		
+		System.out.println( "m" + m  +  '/'  +  "n" +n   ); // test 
 
 		int r = 0;
 		int c = n - 1;
@@ -25,6 +27,8 @@ public class Leetcode_1351_try5_binarySearch {
 			if ( grid [r] [c] >=0) {
 				
 				res += n -c +1;
+			}else {
+				
 			}
 		};
 
