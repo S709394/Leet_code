@@ -26,27 +26,27 @@ public class Leetcode_2215_try1_set {
 
 		Set<Integer> setB = new HashSet<>();
 		
-		Set<Integer> resB = new HashSet<>();
+		Set<Integer> resCntsB = new HashSet<>();
 
 		for (int num : nums2) {
 			setB.add(num);
 
 			if (!setA.contains(num)) {
-				resB.add(num);
+				resCntsB.add(num);
 			}
 		}
-		Set<Integer> resA = new HashSet<>();
+		Set<Integer> resCntsA = new HashSet<>();
 		for (int num : setA) {
 
 			if (!setB.contains(num)) {
-				resA.add(num);
+				resCntsA.add(num);
 			}
 		}
 //		int sizeA = setA.size(), sizeB = setA.size();
-		ArrayList<Integer> listA = new ArrayList<>(resA), listB = new ArrayList<>(resB);
-		List<List<Integer>> res = new ArrayList<> () ;
-		res.add(listA);
-		res.add(listB);
-		return res ;
+		ArrayList<Integer> listA = new ArrayList<>(resCntsA), listB = new ArrayList<>(resCntsB);
+		List<List<Integer>> resCnts = new ArrayList<> () ;
+		resCnts.add(listA);
+		resCnts.add(listB);
+		return resCnts ;
 	}
 }
