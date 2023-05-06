@@ -25,15 +25,19 @@ public class Leetcode_2215_try2_set_ArrayList {
 			}
 		}
 
-		for (int i : nums2) {
+		for (int i : nums1) {
 			if (!setB.contains(i)) {
 				listNotInB.add(i);
 			}
 		}
 
 		List<List<Integer>> listOfList = new ArrayList<>();
-
+		listOfList.add(listNotInB);
+		listOfList.add(listNotInA);
+		
 //		Set<Integer> setB = new HashSet<Integer>()
+
+		return listOfList;
 
 	}
 }
