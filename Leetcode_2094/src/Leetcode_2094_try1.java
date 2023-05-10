@@ -2,7 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Leetcode_2094_try1 {
-	public int[] findEvenNumbers(int[] digits) {
+	public static void main(String[] args) {
+		int nums [] = {1,3,5,2};
+		
+		System.out.println(findEvenNumbers (nums));
+	}
+	public static  int[] findEvenNumbers(int[] digits) {
 		int[] cnts = new int[10];
 
 		for (int i : digits) {
@@ -12,7 +17,7 @@ public class Leetcode_2094_try1 {
 		List<Integer> list = new ArrayList<>();
 
 		for (int i = 0; i < 1000; i += 2) {
-			int curCnts[] = new int[10];
+			int  [] curCnts = new int[10];
 
 			String numStr = i + "";
 
