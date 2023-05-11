@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Leetcode_2094_try1 {
+	
+	//does not works so far
 	public static void main(String[] args) {
 		int nums [] = {1,3,5,2};
 		
@@ -22,12 +24,12 @@ public class Leetcode_2094_try1 {
 			String numStr = i + "";
 
 			// ( 3 digits )
-			// the cnt of the digits
-			for (int j = 0; j < 3; j++) {
-				
-				
-				curCnts[numStr .charAt(j) -'0']++;
-			}
+//			// the cnt of the digits
+//			for (int j = 0; j < 3; j++) {
+//				
+//				
+//				curCnts[numStr .charAt(j) -'0']++;
+//			}
 
 			boolean isVaild = true;
 
