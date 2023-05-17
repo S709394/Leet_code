@@ -1,6 +1,8 @@
 package com.leetcode;
 
-public class Leetcode_1721_try1 {
+//import com.leetcode.Leetcode_1721_try1.ListNode;
+
+public class Leetcode_1721_try2 {
 	public class ListNode {
 		int val;
 		ListNode next;
@@ -19,27 +21,22 @@ public class Leetcode_1721_try1 {
 	}
 
 	public ListNode swapNodes(ListNode head, int k) {
-
 		ListNode left = head, right = head;
-// have to start from 1 
+
 		for (int i = 1; i < k; i++) {
 			left = left.next;
-
 		}
-		ListNode cur = left;
-
-		// 2 pointers
-		while (cur.next != null) {
-			cur = cur.next;
-			right = right.next;
+		
+		ListNode cur = left ;
+		
+		while (cur .next!=null) {
+			cur=cur.next;
+			right =right.next;
 		}
-
-		// swap
-		int val = right.val;
-		right.val = left.val;
-		left.val = val;
-
-		return head;
-
+		
+		int val = right .val;
+		right.val=left .val;
+		left .val =val;
+		
 	}
 }
