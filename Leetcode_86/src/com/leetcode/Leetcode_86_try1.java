@@ -40,11 +40,19 @@ public class Leetcode_86_try1 {
 				p2.next = p;
 				p2 = p2.next;
 			}
-			p = p.next;
+//			p = p.next;
+			ListNode temp = p.next;
+			p.next=null;
+			
+			p=temp;
 		}
-		dummy.next = smallerDummy.next;
-		smaller.next = bigDummy.next;
+		//cut it 
+		
+//		dummy.next = smallerDummy.next;
+//		smaller.next = bigDummy.next;
+		
+		p1.next= bigDummy .next;
 
-		return dummy.next;
+		return smallerDummy.next;
 	}
 }
