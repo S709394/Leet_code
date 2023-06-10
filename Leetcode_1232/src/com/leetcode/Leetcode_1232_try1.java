@@ -15,7 +15,7 @@ public class Leetcode_1232_try1 {
 		}
 
 		int div = coordinates[1][1] - coordinates[0][1];
-		System.out.println(div + "div");//test
+		System.out.println( "div :" + div );//test
 		if (div == 0) {
 			for (int i = 2; i < coorLen; i++) {
 				if (coordinates[i][1] != coordinates[0][1]) {
@@ -24,7 +24,7 @@ public class Leetcode_1232_try1 {
 			}
 		} else {
 
-			int ans = coordinates[1][0] - coordinates[0][1] / coordinates[1][1] - coordinates[0][1];
+			double ans = coordinates[1][0] - coordinates[0][0] / coordinates[1][1] - coordinates[0][1];
 			System.out.println("ans" + ans);
 			for (int i = 1; i < coorLen -1; i++) {
 				System.out.println(i); // test
@@ -32,8 +32,9 @@ public class Leetcode_1232_try1 {
 				int yA = coordinates[i][1];
 				int xB = coordinates[i + 1][0];
 				int yB = coordinates[i + 1][1];
-
-				if ((yA-xA) / ( yB-xB ) != ans) {
+				
+				
+				if ((yB-xB) / ( yA-xA ) != ans) {
 					return false;
 				}
 				
