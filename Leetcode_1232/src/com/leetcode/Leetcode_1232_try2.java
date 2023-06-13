@@ -16,17 +16,21 @@ public class Leetcode_1232_try2 {
 
 		// dy* ( curX - x0) = dX * ( curX-x0);
 
+		
+		//do not need this 
 		if (coordinates == null || coordinates.length < 2 || coordinates[0].length == 0) {
 			return false;
 		}
 		int x0 = coordinates[0][0], y0 = coordinates[0][1], x1 = coordinates[1][0], y1 = coordinates[1][1];
 
+		
+		// the different between  point1 and point0
 		int dx = x1 - x0, dy = y1 - y0;
 
 		for (int i = 1; i < coordinates.length; i++) {
 
-			int curX = coordinates[i][0], curY = coordinates[i][0];
-			if (dy * (curX - x0) != dx * (curY - y0)) {
+			int curX = coordinates[i][0], curY = coordinates[i][1];
+			if (dy * (curX - x1) != dx * (curY - y1)) {
 				return false;
 			}
 		}
