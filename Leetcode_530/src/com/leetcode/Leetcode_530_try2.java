@@ -44,11 +44,11 @@ Submissions
  * 
  *  Works well  
  *  
- *  1.  Find the very left of the  BST   
- *  2.  set the 1st left
+ *  1.  Find the very lRoot of the  BST   
+ *  2.  set the 1st lRoot
  *  3.  Use Dfs 
- *    3a .  loop thought  the end of the left  (  root.left ==null)   
- *    then find the Min value of  ("root.left.val -  root.val")
+ *    3a .  loop thought  the end of the lRoot  (  root.lRoot ==null)   
+ *    then find the Min value of  ("root.lRoot.val -  root.val")
  *  
  *  Runtime: 1 ms, faster than 92.05% of Java online submissions for Minimum Absolute Difference in BST.
 Memory Usage: 45.1 MB, less than 58.88% of Java online submissions for Minimum Absolute Difference in BST.
@@ -63,8 +63,8 @@ public class Leetcode_530_try2 {
 
 		public class TreeNode {
 			int val;
-			TreeNode left;
-			TreeNode right;
+			TreeNode lRoot;
+			TreeNode rRoot;
 
 			TreeNode() {
 			}
@@ -73,10 +73,10 @@ public class Leetcode_530_try2 {
 				this.val = val;
 			}
 
-			TreeNode(int val, TreeNode left, TreeNode right) {
+			TreeNode(int val, TreeNode lRoot, TreeNode rRoot) {
 				this.val = val;
-				this.left = left;
-				this.right = right;
+				this.lRoot = lRoot;
+				this.rRoot = rRoot;
 			}
 		}
 
@@ -98,9 +98,9 @@ public class Leetcode_530_try2 {
 				return;
 			}
 //			System.out.println(" welcome to  dfs ()"); //test
-			dfs(root.left);
+			dfs(root.lRoot);
 
-			// Find the very left of the BST ( the (root.left) == null )
+			// Find the very lRoot of the BST ( the (root.lRoot) == null )
 			if (pre == -1) {
 				pre = root.val;
 //				System.out.println(" Pre :   " + pre); //test
@@ -110,7 +110,7 @@ public class Leetcode_530_try2 {
 
 //				System.out.println("Pre and Ans in else \n Pre :   " + pre + "Ans : " + ans); //test
 			}
-			dfs(root.right);
+			dfs(root.rRoot);
 
 		}
 	}
