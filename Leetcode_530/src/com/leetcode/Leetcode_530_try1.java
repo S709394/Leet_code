@@ -40,9 +40,9 @@ package com.leetcode;
 
 /**
  * Definition for a binary tree node. public class TreeNode { int val; TreeNode
- * lRoot; TreeNode rRoot; TreeNode() {} TreeNode(int val) { this.val = val; }
- * TreeNode(int val, TreeNode lRoot, TreeNode rRoot) { this.val = val; this.lRoot
- * = lRoot; this.rRoot = rRoot; } }
+ * left; TreeNode right; TreeNode() {} TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) { this.val = val; this.left
+ * = left; this.right = right; } }
  */
 public class Leetcode_530_try1 {
 
@@ -52,8 +52,8 @@ public class Leetcode_530_try1 {
 	
 	public class TreeNode {
 		int val;
-		TreeNode lRoot;
-		TreeNode rRoot;
+		TreeNode left;
+		TreeNode right;
 
 		TreeNode() {
 		}
@@ -62,10 +62,10 @@ public class Leetcode_530_try1 {
 			this.val = val;
 		}
 
-		TreeNode(int val, TreeNode lRoot, TreeNode rRoot) {
+		TreeNode(int val, TreeNode left, TreeNode right) {
 			this.val = val;
-			this.lRoot = lRoot;
-			this.rRoot = rRoot;
+			this.left = left;
+			this.right = right;
 		}
 	}
 
@@ -81,22 +81,22 @@ public class Leetcode_530_try1 {
 
 	public void get_min_diff(TreeNode root) {
 		if (root != null) {
-			if (root.lRoot != null) {
-				if (root.val > root.lRoot.val) {
-					diff = Math.min(diff, root.val - root.lRoot.val);
+			if (root.left != null) {
+				if (root.val > root.left.val) {
+					diff = Math.min(diff, root.val - root.left.val);
 				} else {
-					diff = Math.min(diff, root.lRoot.val - root.val);
+					diff = Math.min(diff, root.left.val - root.val);
 				}
 				
-				get_min_diff(root.lRoot) ;
+				get_min_diff(root.left) ;
 			}
-			if (root.rRoot != null) {
-				if (root.val > root.rRoot.val) {
-					diff = Math.min(diff, root.val - root.rRoot.val);
+			if (root.right != null) {
+				if (root.val > root.right.val) {
+					diff = Math.min(diff, root.val - root.right.val);
 				} else {
-					diff = Math.min(diff, root.rRoot.val - root.val);
+					diff = Math.min(diff, root.right.val - root.val);
 				}
-				get_min_diff(root.rRoot) ;
+				get_min_diff(root.right) ;
 			}
 			
 			

@@ -48,8 +48,8 @@ package com.leetcode;
 public class Leetcode_530_try3_practise {
 	public class TreeNode {
 		int val;
-		TreeNode lRoot;
-		TreeNode rRoot;
+		TreeNode left;
+		TreeNode right;
 
 		TreeNode() {
 		}
@@ -58,10 +58,10 @@ public class Leetcode_530_try3_practise {
 			this.val = val;
 		}
 
-		TreeNode(int val, TreeNode lRoot, TreeNode rRoot) {
+		TreeNode(int val, TreeNode left, TreeNode right) {
 			this.val = val;
-			this.lRoot = lRoot;
-			this.rRoot = rRoot;
+			this.left = left;
+			this.right = right;
 		}
 	}
 
@@ -86,15 +86,18 @@ public class Leetcode_530_try3_practise {
 			return;
 		}
 
-		dfs(root.lRoot);
+		dfs(root.left);
 		if (pre == -1) {
+			
 			pre = root.val;
+			System.out.println("pre: " +pre); //test
 		} else {
 			res = Math.min(res, pre);
 			pre=root.val;
-
+			
+			System.out.println("pre: " +pre); //test
 		}
-		dfs (root .rRoot);
+		dfs (root .right);
 	}
 
 }
