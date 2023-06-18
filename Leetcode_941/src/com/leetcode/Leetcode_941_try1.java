@@ -13,6 +13,7 @@ public class Leetcode_941_try1 {
 	}
 
 	public static boolean validMountainArray(int[] arr) {
+		//does not works sofar 
 
 		int len = arr.length;
 		if (len == 2)
