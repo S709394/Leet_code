@@ -1,14 +1,6 @@
 /*
  * 53. Maximum Subarray
-Easy
 
-20787
-
-1029
-
-Add to List
-
-Share
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
 A subarray is a contiguous part of an array.
@@ -36,7 +28,7 @@ Constraints:
 -104 <= nums[i] <= 104
  
 
-Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+Follow up: If you have figured out the O(n) solution, try coding another solution usOutg the divide and conquer approach, which is more subtle.
 
 Accepted
 2,342,699
@@ -89,10 +81,12 @@ public class Try1_leetcode_53 {
 	 
 	 for (int i=1 ; i< nums.length; i++) {
 		 
+		 
+		 //compare the last digit and the MaxSum before that
 //		 MaxSumEndHere =  Math.max(MaxSoFar, MaxSoFar + nums[i]); //wrong
 		 MaxSumEndHere =  Math.max(nums[i], MaxSumEndHere + nums[i]); 
 		 
-		 System.out.println("MaxSumEndHere:" +MaxSumEndHere);
+		 System.out.println("MaxSumEndHere:" +MaxSumEndHere);//test 
 		 
 		 
 		 MaxSoFar= Math.max(MaxSoFar, MaxSumEndHere);
