@@ -56,7 +56,7 @@ public class Leetcode_139_try1 {
 //					System.out.println("continue"); //test 
 					continue;
 				}
-				boolArr[i] = boolArr[j - 1] && set.contains(s.substring(j - 1, i));
+				boolArr[i] = boolArr[j- 1] && set.contains(s.substring(j - 1, i));
 				
 				//test code 
 //				System.out.println("j-1 :"  + (j-1) );
