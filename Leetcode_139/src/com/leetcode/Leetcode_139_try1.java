@@ -18,6 +18,7 @@ import java.util.List;
 public class Leetcode_139_try1 {
 
 	public boolean wordBreak(String s, List<String> wordDict) {
+		//try1
 		Set<String> set = new HashSet<>();
 		// base case   Do not need to have these lines  in 139
 //		if (s == null || s.length() == 0 || wordDict == null || wordDict.size() == 0) {

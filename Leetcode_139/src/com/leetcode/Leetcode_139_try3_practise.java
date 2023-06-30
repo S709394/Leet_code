@@ -18,11 +18,12 @@ public class Leetcode_139_try3_practise {
 	}
 
 	public static boolean wordBreak(String s, List<String> wordDict) {
+		//try3
 		Set<String> set = new HashSet<>();
 
 		int sLen = s.length();
 
-		int wordLen = wordDict.size();
+//		int wordLen = wordDict.size();
 
 		boolean[] boolArr = new boolean[sLen + 1];
 
@@ -31,27 +32,33 @@ public class Leetcode_139_try3_practise {
 		int wordMinLen = Integer.MAX_VALUE;
 
 		for (String word : wordDict) {
-			set.add(s);
+			set.add(word);
 			wordMinLen = Math.min(word.length(), wordMinLen);
 		}
 
 		for (int i = 1; i <= sLen; i++) {
 
-			for (int j = i + 1; j < sLen; j--) {
+			for (int j = i + 1; j > 0; j--) {
 
 				if (j - 1 + i < wordMinLen) {
 					continue;
 				}
 				// test code
-				System.out.println("j-1 :" + (j - 1));
-				System.out.println("i : " + i);
-				System.out.println(s.substring(j - 1, i));
+				System.out.println("j-1 :" + (j - 1));// test
+				System.out.println("i : " + i);// test
+				System.out.println(s.substring(j - 1, i)); // test
+
+				boolArr[i] = boolArr[j - 1] && set.contains(s.substring(j - 1, i));
+				
+				if (boolArr[i] == true) {
+					break;
+				}
 			}
 
+			//
+
 			// find the word in the set
-			if (boolArr[i] == true) {
-				break;
-			}
+			
 
 		}
 		return boolArr[sLen];
