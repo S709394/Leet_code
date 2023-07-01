@@ -21,6 +21,7 @@ public class Leetcode_139_try4_practise {
 		int minLen = Integer.MAX_VALUE;
 		boolean  [] boolArr = new boolean  [ wordDict.size()+1];
 		
+		int strLen  = s.length();
 		Set<String >  set =new HashSet <> () ;
 		
 		for (String word : wordDict) {
@@ -29,6 +30,15 @@ public class Leetcode_139_try4_practise {
 			
 		}
 		
-//		for (int i = 1 ;)
+		for (int i = 1 ; i<= strLen ; i ++) {
+			
+			for (int j= i+1 ;j>0 ; j-- ) {
+				
+			}
+			
+			if( boolArr[ i ]) {
+				continue;
+			}
+		}
 	}
 }

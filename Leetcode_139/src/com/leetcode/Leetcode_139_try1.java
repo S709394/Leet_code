@@ -60,9 +60,9 @@ public class Leetcode_139_try1 {
 				boolArr[i] = boolArr[j- 1] && set.contains(s.substring(j - 1, i));
 				
 				//test code 
-//				System.out.println("j-1 :"  + (j-1) );
-//				System.out.println("i : " +  i);
-//				System.out.println(s.substring(j - 1, i));
+				System.out.println("j-1 :"  + (j-1) );
+				System.out.println("i : " +  i);
+				System.out.println(s.substring(j - 1, i));
 				
 				
 				//end condition
