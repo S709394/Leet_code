@@ -14,7 +14,7 @@ public class Leetcode_859_try2 {
 
 	public static boolean buddyStrings(String A, String B) {
 		
-		//does not works so far 
+		//works well now
 
 		int ALen = A.length();
 		if (A.length() != B.length())
@@ -34,8 +34,9 @@ public class Leetcode_859_try2 {
 				} else {
 					return false;  //more then 2 diff  between A & B
 				}
-				set.add(A.charAt(i));
+				
 			}
+			set.add(A.charAt(i));
 		}
 		
 		if( diff1 != -1 && diff2 != -1 ) {
