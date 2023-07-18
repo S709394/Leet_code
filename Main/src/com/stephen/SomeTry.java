@@ -29,6 +29,8 @@ public class SomeTry {
 //		
 //		System.out.println( " c is  :" +  c );
 
+		
+		//to solve this case   when the  digit at the verylast index 
 		String s = "4a123B567a9";
 		System.out.println(numDifferentIntegers (s));
 	}
