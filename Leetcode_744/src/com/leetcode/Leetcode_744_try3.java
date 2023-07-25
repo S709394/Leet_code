@@ -1,6 +1,6 @@
 package com.leetcode;
 
-public class Leetcode_744_try2 {
+public class Leetcode_744_try3 {
 	public static void main(String[] args) {
 		char[] l = { 'c', 'f', 'j' };
 
@@ -11,18 +11,20 @@ public class Leetcode_744_try2 {
 
 	public static char nextGreatestLetter(char[] letters, char target) {
 		
-
-		//try2  binary search
+		//try3 _practise
+		
 		int n = letters.length;
-		if (letters[n - 1] <= target)
-			return letters[0];
 
 		int left = 0;
 		int right = n - 1;
+		if (letters[n - 1] <= target)
+			return letters[0];
 
 		while (left < right) {
+
 			int mid = left + (right - left) / 2;
 //			System.out.println("left :" + left + " /right : " + right + "  mid: " + mid);
+
 			if (letters[mid] <= target) {
 				left = mid + 1;
 			} else {
@@ -30,7 +32,7 @@ public class Leetcode_744_try2 {
 			}
 
 		}
+		
 		return letters[left];
-
 	}
 }
