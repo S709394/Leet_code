@@ -31,10 +31,51 @@ public class SomeTry {
 
 		
 		//to solve this case   when the  digit at the verylast index 
-		String s = "4a123B567a9";
+//		String s = "4a123B567a9";
+		
+		//leet1234code234
+		String s = "leet4567code234";
+		
+		//a1b01c001
+//		String s = "a1b01c001";
+		
 		System.out.println(numDifferentIntegers (s));
 	}
 
+	
+//	//try1 
+//	public static int numDifferentIntegers(String word) {
+//
+//		int wLen = word.length();
+//		boolean found = false;
+//		
+//		int curNum = 0 ;
+//		for (int i = 0; i < wLen; i++) {
+//			if (word.charAt(i) - '0' >= 0 && word.charAt(i) - '0' <= 9 ) {
+//
+//				if (found == false) {
+//					curNum+= (word.charAt(i) -'0') ;
+//					found =true;
+//				}else {
+//					curNum =curNum*10 ;
+//					curNum +=  (word.charAt(i) -'0');
+//				}
+//				System.out.println(curNum);
+//
+//			}else {
+//				int addNum = curNum ;
+//				System.out.println("add: " + addNum);
+//				//add
+//				
+//				curNum = 0 ;
+//				found=false ;
+//				
+//			}
+//		}
+//		return 999;
+//	}
+	
+	//try2 
 	public static int numDifferentIntegers(String word) {
 
 		int wLen = word.length();
@@ -42,6 +83,8 @@ public class SomeTry {
 		
 		int curNum = 0 ;
 		for (int i = 0; i < wLen; i++) {
+			System.out.println("i: " + i);
+			
 			if (word.charAt(i) - '0' >= 0 && word.charAt(i) - '0' <= 9 ) {
 
 				if (found == false) {
@@ -51,20 +94,35 @@ public class SomeTry {
 					curNum =curNum*10 ;
 					curNum +=  (word.charAt(i) -'0');
 				}
-				System.out.println(curNum);
+				System.out.println(curNum);//test
 
 			}else {
 				int addNum = curNum ;
-				System.out.println("add: " + addNum);
+				if(found ==true) {
+					System.out.println("add: " + addNum);
+				}
+				
 				//add
 				
 				curNum = 0 ;
 				found=false ;
 				
 			}
+			
+//			if (word.charAt(i) - '0' < 0 || word.charAt(i) - '0' > 9 ) {
+//				
+//			}
+			
+			
+		}
+		if( curNum != 0) {
+			//add
+			int addNum = curNum ;
+			System.out.println("add: " + addNum);
 		}
 		return 999;
 	}
+	
 
 ////		Scanner reader = new Scanner (System.in);
 //
