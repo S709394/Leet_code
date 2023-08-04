@@ -22,7 +22,7 @@ public class Leetcode_2299_try1 {
 		// hasSpe
 		boolean hasSpe = false;
 
-//		following string: "!@#$%^&*()-+". (length = 12 )
+//		following string: "!@#$%^&*()-+". (length = 12 )x 
 		String speStr = "!@#$%^&*()-+";
 		int speLen = speStr.length();
 		int[] spe = new int[speLen];
