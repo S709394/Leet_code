@@ -8,7 +8,7 @@ Medium
 Add to List
 
 Share
-Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represCntsent. Return the answer in any order.
 
 A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
@@ -81,7 +81,7 @@ public class Leetcode_17_try2 {
 		
 		for (int i = 0 ; i < digits.length();i++) {
 			
-			//set the x to the number of the one user press
+			//set the x to the number of the one user presCntss
 			int x =Character.getNumericValue(digits.charAt(i));
 			
 			System.out.println("int x : " + x);//test
