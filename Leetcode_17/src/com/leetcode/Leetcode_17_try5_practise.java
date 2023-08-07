@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Leetcode_17_try5_practise {
 	public static void main(String[] args) {
+		
+		//try 5 , works well
 
 	}
 
@@ -15,14 +17,14 @@ public class Leetcode_17_try5_practise {
 	public List<String> letterCombinations(String digits) {
 		List<String> resCntsult = new LinkedList<>();
 
-		int dLen = digits.length();
-		if (dLen == 0) {
+		
+		if (digits.length() == 0) {
 			return resCntsult;
-
 		}
+		
 
 		resCntsult.add(0, "");
-
+		int dLen = digits.length();
 		for (int i = 0; i < dLen; i++) {
 
 			int x = Character.getNumericValue(digits.charAt(i));

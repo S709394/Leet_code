@@ -36,7 +36,7 @@ public class Leetcode_17_try4 {
 //					System.out.println();
 					
 					String newNum = preStr + c ;
-					System.out.println(newNum);
+//					System.out.println(newNum);
 					res.add(newNum);
 					
 
