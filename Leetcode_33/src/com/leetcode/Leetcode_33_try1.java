@@ -11,7 +11,7 @@ Add to List
 Share
 There is an integer array nums sorted in ascending order (with distinct values).
 
-Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resCntsulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
 
 Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
 
@@ -44,7 +44,7 @@ nums is an ascending array that is possibly rotated.
 
 
 /*Idea   :
- * Use  binary search to find the MIN int the array
+ * Use  binary search to find the MIN int in the array
  * 
  * 
  * 
@@ -55,8 +55,12 @@ package com.leetcode;
 public class Leetcode_33_try1 {
 	public static void main(String[] args) {
 		
+		int [] nums = {4,5,6,7,0,1,2};
+		int target = 0;
 		
+		int resCnts = search (nums,target);
 		
+		System.out.println(resCnts);
 	} 
 	
 	public  static int search(int[] nums, int target) {
@@ -73,6 +77,10 @@ public class Leetcode_33_try1 {
 	         {
 	        	 int midPoint =left + (right-left)/2;
 //	        	 if (nums[midPoint]>nums[midPoint+1]) {// //my try  //not good  
+	        	 
+	        	 
+	        	 //  If meet this one   the midPoint mush not on the right of the start point of the sorted array
+	        	 // so use  midPoint +1 here
 	        	 if(nums[midPoint]> nums[right]) {
 	        		 
 //	        		 left=midPoint;//wrong
@@ -99,7 +107,7 @@ public class Leetcode_33_try1 {
 	         }
 	         
 	         //2nd binary search 
-	         while (left<right)
+	         while (left<=right)
 	         {
 	        	 int midPoint =left + (right-left)/2;
 //	        	 if (nums[midPoint]>nums[midPoint+1]) {// //my try  //not good  

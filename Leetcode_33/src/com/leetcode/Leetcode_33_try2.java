@@ -12,7 +12,7 @@ Add to List
 Share
 There is an integer array nums sorted in ascending order (with distinct values).
 
-Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resCntsulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
 
 Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
 
@@ -66,9 +66,9 @@ public class Leetcode_33_try2 {
 //		int [] nums = {4,5,6,7,0,1,2};
 //		int target = 3;
 //		
-		int res = search (nums,target);
+		int resCnts = search (nums,target);
 		
-		System.out.println(res);
+		System.out.println(resCnts);
 	}
 	
 	  public static int search(int[] nums, int target) {
