@@ -16,7 +16,7 @@ public class Leetcode_17_try4 {
 	// "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"
 	static String[] mapping = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 
-	public static List<String> letterCobinations(String digits) {
+	public  List<String> letterCobinations(String digits) {
 		List<String> res = new LinkedList<String>();
 		if (digits.length() == 0) {
 			return res;
