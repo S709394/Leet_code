@@ -3,14 +3,20 @@ package com.leetcode;
 public class Leetcode_459_try2 {
 	
 	//do not know what is the idea so far 
-	public boolean repeatedSubstringPattern(String s) {
+	public static void main(String[] args) {
+		String  str = "abcabc" ;
+		 System.out.println(repeatedSubstringPattern (str ) );
+	}
+	public  static boolean repeatedSubstringPattern(String s) {
 		//try2 
 		// not have to 
 		if ( s==null || s.length() ==0) return true ;
 		
 		int n = s.length() ;
 		
-		for ( int  len = 0 ; len <= n/2 ; len ++ ) {
+		
+		// len  start  from 1 
+		for ( int  len = 1 ; len <= n/2 ; len ++ ) {
 			
 			 // s length must can be divided by the pattern length
 			if (n  % len != 0 ){
@@ -23,11 +29,12 @@ public class Leetcode_459_try2 {
 			
 			
 			// the 2nd pattern
-			int i = len , j = len + n-1;
+			int i = len , j = len + i-1;
 			
 			while  ( j < n) {
-				
-				if ( !pattern  .equals( s.subSequence(i ,j)) ) {
+				String subString =  s.substring( i , j +1);
+				System.out.println( "subString :" + subString );
+				if ( !pattern  .equals(subString	) ) {
 					break ;
 				}
 				i+= len ;
