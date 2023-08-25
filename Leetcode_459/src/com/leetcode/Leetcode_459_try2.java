@@ -2,7 +2,7 @@ package com.leetcode;
 
 public class Leetcode_459_try2 {
 	
-	//do not know what is the idea so far 
+	//understand now
 	public static void main(String[] args) {
 		String  str = "abcabc" ;
 		 System.out.println(repeatedSubstringPattern (str ) );
