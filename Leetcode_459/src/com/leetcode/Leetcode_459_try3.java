@@ -25,7 +25,7 @@ public class Leetcode_459_try3 {
 			int i = len, j = i + len - 1;
 			while (j < n) {
 
-				String subString = s.substring(i, j +11);
+				String subString = s.substring(i, j +1);
 				if (!pattern.equals(subString)) {
 					break;
 
