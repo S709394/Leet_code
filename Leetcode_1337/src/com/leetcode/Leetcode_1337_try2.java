@@ -5,7 +5,7 @@ public class Leetcode_1337_try2 {
 		
 	}
 	public static int[] kWeakestRows(int[][] mat, int k) 
-	{ // try2  looks good  // not good so far 
+	{ // try2  looks good  
 		int rows = mat.length;
 		int cols = mat[0].length;
 		
@@ -19,10 +19,8 @@ public class Leetcode_1337_try2 {
 				}
 				
 			}
-			arr[i] = count1 ;
-			
+			arr[i] = count1 ;	
 		}
-		
 		int ans [] = new int [ k] ;
 		
 		
@@ -39,6 +37,7 @@ public class Leetcode_1337_try2 {
 			}
 			
 			ans [ i ] = minIdx ;
+			
 			
 			arr [ minIdx ]= Integer.MAX_VALUE;
 		}

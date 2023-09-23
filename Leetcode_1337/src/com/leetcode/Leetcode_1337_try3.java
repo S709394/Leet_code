@@ -39,6 +39,10 @@ public class Leetcode_1337_try3 {
 			
 			ans [i] = minCnt;
 			
+			
+			
+			
+			
 		}
 		
 		
