@@ -9,7 +9,8 @@ public class Leetcode_1337_try4 {
 				{ 1, 1, 1, 1, 1 } };
 	}
 
-	public static int[] kWeakestRows(int[][] mat, int k) { // try4
+	public static int[] kWeakestRows(int[][] mat, int k) { 
+		// try4
 		int rows = mat.length;
 		int cols = mat[0].length;
 

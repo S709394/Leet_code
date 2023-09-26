@@ -39,7 +39,7 @@ public class Leetcode_1337_try2 {
 			ans [ i ] = minIdx ;
 			
 			
-			arr [ minIdx ]= Integer.MAX_VALUE;
+			arr [ minIdx ]= Integer.MAX_VALUE; //test 
 		}
 		return ans;
 		
