@@ -2,19 +2,27 @@ package com.leetcode;
 
 public class Leetcode_316_try2 {
 	public static void main(String[] args) {
-
+		 String s = "abccca" ;
+		 
+		 System.out.println(removeDuplicateLetters (s));
 	}
 
-	public String removeDuplicateLetters(String s) {
+	public static String removeDuplicateLetters(String s) {
+		
+		//try2   works well 
 		char[] S = s.toCharArray();
 
 		int[] left = new int[26];
 
 		for (char c : S) {
 			left[c - 'a']++;
+			
+//			System.out.println(  "left[c - 'a']  :"  + left[c - 'a']);//test 
 		}
 // store the  ans string  
 		StringBuilder ans = new StringBuilder(26);
+		
+		/// store the char in the  ans String ;
 		boolean[] inAns = new boolean[26];
 
 		for (char c : S) {
@@ -31,8 +39,8 @@ public class Leetcode_316_try2 {
 			}
 			
 			ans.append(c);
-			int
+			inAns[c - 'a'] = true ;
 		}
-
+		return ans.toString();
 	}
 }
