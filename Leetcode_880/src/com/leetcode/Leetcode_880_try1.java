@@ -9,6 +9,8 @@ public class Leetcode_880_try1 {
 	}
 
 	public static String decodeAtIndex(String s, int k) {
+		
+		//does not works so far
 
 		int sLen = s.length();
 
@@ -25,8 +27,9 @@ public class Leetcode_880_try1 {
 			System.out.println(ascii);  //test 
 			
 			//
-			boolean = isLow
-			if    (fullString ==false  &&) {
+			boolean curIsNum = false ;
+			if    (fullString ==false ) {
+				
 				
 			}
 			
@@ -35,6 +38,7 @@ public class Leetcode_880_try1 {
 				curStr.append((char) ascii);
 				System.out.println(curStr);  //test 
 			} else  if (ascii - '0' >=48 && ascii - 'a'  <=57) {
+				curIsNum = true ;
 				curNum *=10 ; 
 				curNum +=  ascii -'0';
 				System.out.println( "curNum : " +curNum ); //test
