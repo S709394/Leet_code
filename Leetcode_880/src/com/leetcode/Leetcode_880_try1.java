@@ -1,52 +1,23 @@
 package com.leetcode;
 
 public class Leetcode_880_try1 {
-
 	public static void main(String[] args) {
-		String s = "leet2code";
-
-		System.out.println(decodeAtIndex(s, 10));
+		
 	}
 
-	public static String decodeAtIndex(String s, int k) {
+	public String decodeAtIndex(String s, int k) {
 		
-		//does not works so far
-
-		int sLen = s.length();
-
-		int idx = 0;
-		int curNum = 0 ; 
+		char []  chs = s.toCharArray() ;
+		long size = 0 ;
 		
-		
-		boolean fullString =  false ;
-		while (idx < sLen - 1) {
-			int curLen = 0;
-			StringBuilder curStr = new StringBuilder();
-
-			int ascii = s.charAt(curLen);
-			System.out.println(ascii);  //test 
-			
-			//
-			boolean curIsNum = false ;
-			if    (fullString ==false ) {
-				
-				
-			}
-			
-			
-			if (ascii - 'a' >= 0 && ascii - 'a' < 26) {
-				curStr.append((char) ascii);
-				System.out.println(curStr);  //test 
-			} else  if (ascii - '0' >=48 && ascii - 'a'  <=57) {
-				curIsNum = true ;
-				curNum *=10 ; 
-				curNum +=  ascii -'0';
-				System.out.println( "curNum : " +curNum ); //test
-			}
-
-			idx++;
+		for ( char ch : chs) {
+			 if(Character.isDigit(ch)) {
+				 size *= (int)  (ch-'0') ;
+			 }else {
+				 size ++;
+			 }
+			 
 		}
-
-		return "999";
+		
 	}
 }
