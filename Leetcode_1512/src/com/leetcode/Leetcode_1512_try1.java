@@ -9,24 +9,27 @@ public class Leetcode_1512_try1 {
 	public static int numIdenticalPairs(int[] nums) {
 		int  len = nums.length;
 		
-		 int left = 0 ; int right = len -1 ;
+		 int left = 0 ; int right = len ;
 		 
 		 int cnt  = 0 ;
 		
 		 
 		 
 		 for (int i = left ; i < right ; i ++) {
-			 System.out.println(" i : " + i);
+//			 System.out.println(" i : " + i);
 			 
 			 for ( int  j = i+1 ;  j < right ; j ++) {
-				 System.out.println("j :" + j );
+//				 System.out.println("j :" + j );
 				 if( nums [ i] == nums[j]) {
 					 cnt ++ ;
+//					 System.out.println( "cnt :" +  cnt);
+					 
+					 
 				 }
 			 }
 			 
 			 
-			 right --;
+//			 right --;
 			 
 		 }
 		 return cnt ;
