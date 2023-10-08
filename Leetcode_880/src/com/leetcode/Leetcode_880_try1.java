@@ -7,6 +7,8 @@ public class Leetcode_880_try1 {
 
 	public String decodeAtIndex(String s, int k) {
 		
+		// no idea so far 
+		
 		char []  chs = s.toCharArray() ;
 		long size = 0 ;
 		
