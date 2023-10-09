@@ -11,7 +11,7 @@ Add to List
 Share
 Given a binary tree, find its minimum depth.
 
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearesCntst leaf node.
 
 Note: A leaf is a node with no children.
 
@@ -82,32 +82,32 @@ public class Leetcode_111_try0_notLinkedList {
 
 	}
 
-	public int minDepth(TreeNode root, int minDepth , int depthCount) {
+	public int minDepth(TreeNode root, int minDepth , int depthremain) {
 
 		if(root==null) {
 			return minDepth;
 		}
 		if (root.right == null && root.left == null) {
-			return  Math.min(minDepth, depthCount);
+			return  Math.min(minDepth, depthremain);
 			
 		} else {
 
 			if (root.left != null) {
 //				System.out.println("depth:bbb " + depth);
-				minDepth(root.left, minDepth,depthCount);
+				minDepth(root.left, minDepth,depthremain);
 			}
 
 			if (root.right != null) {
 //				System.out.println("depth:bbb " + depth);
-				minDepth(root.right, minDepth,depthCount);
+				minDepth(root.right, minDepth,depthremain);
 			}
 		}
 
 //		if(root.left!=null) {
-//			minDepth (root.left,depth+1,res);
+//			minDepth (root.left,depth+1,resCnts);
 //		}
 //		if(root.right!=null) {
-//			minDepth (root.right,depth+1,res);
+//			minDepth (root.right,depth+1,resCnts);
 //		}
 
 		return depth;
