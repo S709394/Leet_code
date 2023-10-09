@@ -28,10 +28,7 @@ public class Leetcode_try3_practise_arrayList {
 				 }
 			 }
 			 
-			 ll .add(  new ArrayList (list) );
-			
-			 
-			 
+			 ll .add(  new ArrayList (list) );		 
 		 }
 		 return ll ; // 
 	 }
