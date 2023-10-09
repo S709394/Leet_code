@@ -10,16 +10,15 @@ public class Leetcode_try3_charAt_practise {
 		
 		int startIndex  = 0 ;
 		for (char c : s.toCharArray()) {
-			
-			startIndex = t.indexOf(c,startIndex) ;
-			
-			
-			
-			if(startIndex == -1 ) {
+
+			startIndex = t.indexOf(c, startIndex);
+
+			if (startIndex == -1) {
 				return false;
+
 			}
 			//Start in the next  char after the find the current char
-			startIndex ++ ;
+			startIndex++;
 		}
 		
 		

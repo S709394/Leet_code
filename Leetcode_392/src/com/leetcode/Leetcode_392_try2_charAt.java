@@ -20,23 +20,46 @@ public class Leetcode_392_try2_charAt {
 	}
 
 	public static boolean isSubsequence(String s, String t) {
-
-		int startIndex = 0;
+		
+		int  startIndex = 0 ;
+		
 		for (char c : s.toCharArray()) {
-
-			startIndex = t.indexOf(c, startIndex);
-
-			if (startIndex == -1) {
+			
+			startIndex = t.indexOf(c,startIndex);
+			
+			if( startIndex == -1 ) {
 				return false;
-
 			}
-			// Start in the next char after the find the current char
-			startIndex++;
-
-//            System.out.println("fromIndex(after/"+startIndex); //test
+			
+			startIndex ++;
+			
 		}
-
 		return true;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+//		//v1.0
+//		int startIndex = 0;
+//		for (char c : s.toCharArray()) {
+//
+//			startIndex = t.indexOf(c, startIndex);
+//
+//			if (startIndex == -1) {
+//				return false;
+//			}
+//			// Start in the next char after the find the current char
+//			startIndex++;
+////            System.out.println("fromIndex(after/"+startIndex); //test
+//		}
+//		return true;
 	}
 
 }
