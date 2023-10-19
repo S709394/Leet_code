@@ -22,7 +22,7 @@ public class Leetcode_896_try1 {
 //			boolean ans = true;
 			for (int i = 1; i < len - 1; i++) {
 //				System.out.println(i);
-				if (nums[i] >= nums[i + 1]) {
+				if (nums[i] > nums[i + 1]) {
 					return false;
 				}
 
@@ -30,7 +30,7 @@ public class Leetcode_896_try1 {
 
 		} else {
 			for (int i = 1; i < len - 1; i++) {
-				if (nums[i] <= nums[i + 1]) {
+				if (nums[i] < nums[i + 1]) {
 					return false;
 				}
 			}
