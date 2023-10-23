@@ -10,6 +10,10 @@ public class Leetcode_1436_try1 {
 		
 		///
 //		int cnt = 0;
+		
+		//1  . add  the strings in every list  into the strSet , but exclude the last one .
+		//2 . The
+		
 		Set<String> strSet = new HashSet<>();
 
 		for (List<String> list : paths) {
