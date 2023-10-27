@@ -47,7 +47,16 @@ Output: false
 
 	s=  "{[()]}";
 	
-	When the 3 times of the for loop runs 
+	Dry run 
+	
+	Stack : 
+	
+	}
+	}]
+	}])
+	}]
+	}
+	stack size()=0
 	
  * */
 
@@ -62,7 +71,7 @@ public class Leetcode_20_try1 {
 //		String s = "})}";
 		
 		String s = "({()})";
-		String s1 = "({))";
+//		String s1 = "({))";
 		
 		boolean b = isVaild (s);
 		System.out.println(b);
