@@ -1,7 +1,7 @@
 package com.leetcode;
 /*Idea:
  * 
- * Use 2 int [26] to store the count of char 
+ * Use 2 int [26] to store the remain of char 
  * 
  * Runtime: 5 ms, faster than 74.08% of Java online submissions for Valid Anagram.
 Memory Usage: 44 MB, less than 48.49% of Java online submissions for Valid Anagram.
