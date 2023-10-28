@@ -13,6 +13,8 @@ public class Leetcode_859_try1 {
 
 	public static boolean buddyStrings(String s, String goal) {
 		
+		//does not works 
+		
 		int sLen = s.length();
 		int goalLen = goal.length();
 		if (sLen != goalLen)

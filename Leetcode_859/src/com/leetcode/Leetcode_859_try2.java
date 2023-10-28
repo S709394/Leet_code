@@ -13,8 +13,8 @@ public class Leetcode_859_try2 {
 	}
 
 	public static boolean buddyStrings(String A, String B) {
-		
-		//works well now
+
+		// works well now
 
 		int ALen = A.length();
 		if (A.length() != B.length())
@@ -32,21 +32,21 @@ public class Leetcode_859_try2 {
 				} else if (diff2 == -1) {
 					diff2 = i;
 				} else {
-					return false;  //more then 2 diff  between A & B
+					return false; // more then 2 diff between A & B
 				}
-				
+
 			}
 			set.add(A.charAt(i));
 		}
-		
-		if( diff1 != -1 && diff2 != -1 ) {
-			return A.charAt(diff2) == B.charAt(diff1)  && A.charAt( diff1) == B.charAt(diff2);
+
+		if (diff1 != -1 && diff2 != -1) {
+			return A.charAt(diff2) == B.charAt(diff1) && A.charAt(diff1) == B.charAt(diff2);
 		}
-		
-		if( diff1 != -1) {  // only 1 diff place 
-			return false ;
+
+		if (diff1 != -1) { // only 1 diff place
+			return false;
 		}
-		
-		return  set.size() < A.length() ;// No different between A & B, check if A contains at least 1 duplicate letters.
+
+		return set.size() < A.length();// No different between A & B, check if A contains at least 1 duplicate letters.
 	}
 }

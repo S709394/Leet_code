@@ -34,6 +34,16 @@ public class Leetcode_859_try3 {
 			}
 			set.add(A.charAt(i));
 		}
-
+		
+		if( diff1!= -1 && diff2!= -1) {
+			return A.charAt(diff2)== B.charAt(diff1) && A.charAt(diff1) == B.charAt(diff2);
+		}
+		if(diff1 != -1) {  //diff1!= -1  only 1 character is diff
+			return false ;
+		}
+		
+		
+		// check  when A the same as B  , are they have all unique characters ?
+		return set.size()< A.length();
 	}
 }
