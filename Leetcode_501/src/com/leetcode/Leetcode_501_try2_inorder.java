@@ -1,6 +1,8 @@
 package com.leetcode;
 
 //import com.leetcode.Leetcode_501_try1_inorder.TreeNode;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Leetcode_501_try2_inorder {
 	public class TreeNode {
@@ -34,16 +36,40 @@ public class Leetcode_501_try2_inorder {
 			return new int[0];
 		}
 
-		traverse(root.left);
+		List<Integer> modes = new ArrayList<>();
 
-		
-		
-		prev = root ;
-		traverse(root.right);
+		traverse(root, modes);
+
+		int[] res = new int[modes.size()];
+		for (int i = 0; i < modes.size(); i++) {
+			modes.get(i);
+		}
+
+		return res;
 
 	}
 
-	public static void traverse(TreeNode node) {
+	public static void traverse(TreeNode node, List<Integer> modes) {
+		if (node == null) {
+			return;
+		}
+		traverse(node.left, modes);
+		// The first one 
+		if (prev != null) {
+			cnt++;
+		} else {
+			cnt--;
+		}
+		
+		if (cnt > max ) {
+			max=cnt ;
+			modes.clear();
+			modes.add(node);
+		}
+
+		prev = node;
+
+		traverse(node.right, modes);
 
 	}
 }
