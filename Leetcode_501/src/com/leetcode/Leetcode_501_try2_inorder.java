@@ -42,7 +42,7 @@ public class Leetcode_501_try2_inorder {
 
 		int[] res = new int[modes.size()];
 		for (int i = 0; i < modes.size(); i++) {
-			modes.get(i);
+			res[i] = modes.get(i);
 		}
 
 		return res;
@@ -54,17 +54,24 @@ public class Leetcode_501_try2_inorder {
 			return;
 		}
 		traverse(node.left, modes);
-		// The first one 
+		// The first one
 		if (prev != null) {
-			cnt++;
-		} else {
-			cnt--;
-		}
-		
-		if (cnt > max ) {
-			max=cnt ;
+			if (prev.val == node.val) {
+				cnt++;
+			}else {
+				cnt= 1;
+			}
+				
+		} 
+
+		if (cnt > max) {
+			max = cnt;
+
+			// start from 0 size
 			modes.clear();
-			modes.add(node);
+			modes.add(node.val);
+		} else if (cnt == max) {
+			modes.add(node.val);
 		}
 
 		prev = node;
