@@ -3,7 +3,6 @@ package com.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.leetcode.Leetcode_501_try2_inorder.TreeNode;
 
 public class Leetcode_501_try3_inorder {
 	public class TreeNode {
