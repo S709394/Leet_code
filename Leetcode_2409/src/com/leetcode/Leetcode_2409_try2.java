@@ -20,15 +20,12 @@ public class Leetcode_2409_try2 {
 
 		// 2 using LocalDate in java / start date and end date // toLocalDate()
 		LocalDate startDate = toLocalDate(start);
-
 		LocalDate endDate = toLocalDate(end);
-
+		
 		// 3 return is the start date if after the endDate ? yes return 0
 		// using ChronoUnit.DAYS.between ( startD , endD )
-
-		return startDate.isAfter(endDate) ? 0 : (int)ChronoUnit.DAYS.between(startDate, endDate)+1;
+		return startDate.isAfter(endDate) ? 0 : (int) ChronoUnit.DAYS.between(startDate, endDate) + 1;
 	}
-
 	/// the method need a String of Date and return a LocalDate and
 
 	public static LocalDate toLocalDate(String date) {
