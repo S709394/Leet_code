@@ -13,23 +13,29 @@ public class Leetcode_2409_try3 {
 	}
 
 	public static int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
-		// 1 using compare to to get the start date and the end date
-
+		// 1 using compare to get the start date and the end date
 		// start should be the late one , end should be the early one
+		String start = arriveAlice.compareTo(arriveBob) < 0 ? arriveBob : arriveAlice;
+		String end = leaveAlice.compareTo(leaveBob) < 0 ? leaveAlice : leaveBob;
 
 		// 2 using LocalDate in java / start date and end date // toLocalDate()
+		LocalDate startDate = toLocalDate(start);
+		LocalDate endDate = toLocalDate(end);
 
 		// 3 return is the start date if after the endDate ? yes return 0
 		// using ChronoUnit.DAYS.between ( startD , endD )
-
+		return startDate.isAfter(endDate) ? 0 : (int) ChronoUnit.DAYS.between(startDate, endDate);
 	}
 	/// the method need a String of Date and return a LocalDate and
 
 	public static LocalDate toLocalDate(String date) {
 		// return a locateDate of ( year , month(string ) , day (string ) , useing sub
-		// string //2022 y is normal ;
+//		( year , month(int ) , day (int  )
 		// using Integer.parseInt (
+		// string //2022 y is normal ;
 
+		return LocalDate.of(2022, Integer.parseInt(date.substring(0, 2)), Integer.parseInt(date.substring(3)));
+		
 	}
 
 }
