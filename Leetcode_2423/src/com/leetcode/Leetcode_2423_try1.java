@@ -4,7 +4,9 @@ package com.leetcode;
 
 public class Leetcode_2423_try1 {
 	public static void main(String[] args) {
-		String word = "abc";
+//		String word = "abc";
+		// aca
+		String word = "aca";
 		System.out.println(equalFrequency(word));
 	}
 
@@ -44,8 +46,15 @@ public class Leetcode_2423_try1 {
 				cnts[1]++;
 			}
 		}
-
-		if (numA == -1 || numB == -1 || Math.abs(cnts[0] - cnts[1]) != 1) {
+System.out.println( "Numa :" + numA  + "numb"+ numB);
+		if (numA != -1 && numB == -1) {
+			return numA == 1;
+		}
+		if(  Math.abs(cnts[0] - cnts[1]) == 1) {
+			return true ; 
+		}
+		if (numA == -1 || numB == -1 ) {
+//			System.out.println("haha");
 			return false;
 		}
 
