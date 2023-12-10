@@ -29,7 +29,7 @@ Example 3:
 Input: s = " "
 Output: true
 Explanation: s is an empty string "" after removing non-alphanumeric characters.
-Since an empty string reads the same forward and backward, it is a palindrome.
+sOutce an empty string reads the same forward and backward, it is a palindrome.
  
 
 Constraints:
@@ -62,9 +62,10 @@ public class Leetcode_226_try1 {
 		}
 	}
 
-//	public static void main(String[] args) {
-//
-//	}
+	public static void main(String[] args) {
+//		TreeNode n2 = new TreeNode ( [1,2,3,4,5,6]);
+
+	}
 
 	public static TreeNode invertTree(TreeNode root) {
 		if (root == null) {
