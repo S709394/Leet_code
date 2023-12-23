@@ -10,5 +10,8 @@ public class Leetcode_1287_try1_binarySearch {
 		if (arr.length == 1) {
 			return arr[0];
 		}
+		int len = arr.length ;
+		
+		List < Integer>  firstThreeQuarters = new ArrayList <>  (Arrays.asList  [len/4])  
 	}
 }
