@@ -12,6 +12,8 @@ public class Leetcode_1287_try1_binarySearch {
 		}
 		int len = arr.length ;
 		
-		List < Integer>  firstThreeQuarters = new ArrayList <>  (Arrays.asList  [len/4])  
+		List < Integer>  firstThreeQuarters = new ArrayList <>  (Arrays.asList  [len/4])   ;;
+		
+		//What is the next step 
 	}
 }
